@@ -10,6 +10,7 @@ export default {
     },
     fontFamily: {
       NotoSerif: ["Noto Serif", "serif"],
+      Ubuntu: ["Ubuntu", "sans-serif"],
     },
     extend: {},
   },
