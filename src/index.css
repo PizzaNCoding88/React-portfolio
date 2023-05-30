@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* *, *::before, *::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -17,7 +17,7 @@ body {
 }
 
 html {
-  color-scheme: dark light;
+  /* color-scheme: dark light; */
   -webkit-text-size-adjust: none; 
   text-size-adjust: none; 
   scroll-behavior: smooth;
@@ -48,4 +48,5 @@ summary,
 [type=submit],
 [type=checkbox] {
     cursor: pointer;
-} */
+}
+
