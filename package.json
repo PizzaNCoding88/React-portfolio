@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://PizzaNCoding88.github.io/React-portfolio/",  
+  "homepage": "https://PizzaNCoding88.github.io/React-portfolio/",  
   "scripts": {
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d dist",
