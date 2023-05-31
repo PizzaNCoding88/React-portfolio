@@ -18,7 +18,12 @@ const NavBar = () => {
                 <AnimatePresence>
 
                 {sidebarOpen && (
-                  <><div className='h-screen w-screen bg-primary opacity-90 absolute top-0 left-0 bottom-0 z-30' onClick={handleSidebarClose}></div> 
+                  <><motion.div className='h-screen w-screen bg-primary opacity-90 absolute top-0 left-0 bottom-0 z-30'
+                  key="overlay"
+                  initial={{opacity: 0}}
+                  animate={{opacity:1}}
+                  exit={{opacity: 0, transition:{duration:0.1}}}
+                  onClick={handleSidebarClose}></motion.div> 
         
                 <motion.div
                 key="navbar"
@@ -31,9 +36,9 @@ const NavBar = () => {
                    duration: 0.5
                 }}
                  className='w-4/5 h-screen absolute flex justify-center items-center top-0 right-0 z-40 bg-primary shadow-2xl font-NotoSerif'>
-                    <RxCross2 className='absolute top-4 left-4 text-secondary text-xl cursor-pointer' onClick={handleSidebarClose}
+                    <RxCross2 className='absolute top-4 left-4 text-secondary text-xl cursor-pointer font-bold' onClick={handleSidebarClose}
                     />
-                    <ul className=''>
+                    <ul className='flex flex-col justify-between items-center gap-16 text-xl font-Ubuntu text-secondary font-bold'>
                         <li>Home</li>
                         <li>Projects</li>
                         <li>Contact</li>
