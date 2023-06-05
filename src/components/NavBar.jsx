@@ -35,11 +35,13 @@ const NavBar = () => {
                   bounce: 0.3,
                    duration: 0.5
                 }}
-                 className='w-4/5 h-screen absolute flex justify-center items-center top-0 right-0 z-40 bg-gradient-to-r from-primary to-[#222222] shadow-nav-shadow shadow-2xl font-NotoSerif'>
+                 className='w-4/5 h-screen absolute flex justify-center items-center top-0 right-0 z-40 bg-gradient-to-r from-primary to-[#222222] shadow-nav-shadow font-NotoSerif'>
                     <RxCross2 className='absolute top-4 left-4 text-secondary text-xl cursor-pointer font-bold' onClick={handleSidebarClose}
                     />
                     <ul className='flex flex-col justify-between items-center gap-16 text-xl font-Ubuntu text-secondary font-bold'>
-                        <li>Home</li>
+                        <a href="#home">
+                          <li>Home</li>                          
+                        </a>
                         <li>Projects</li>
                         <li>Contact</li>
                     </ul>
