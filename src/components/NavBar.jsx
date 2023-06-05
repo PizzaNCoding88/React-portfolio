@@ -9,7 +9,7 @@ const NavBar = () => {
     const handleSidebarClose =() =>{setSidebarOpen(false)};
 
   return (
-    <div className='bg-primary'>
+    <div className='bg-gradient-to-r from-primary to-[#222222]'>
         <div className='flex justify-between items-center w-4/5 py-6 mx-auto'>
             <div className=' font-NotoSerif font-semibold text-secondary text-3xl'>UN</div>
             <div className=''>
@@ -35,7 +35,7 @@ const NavBar = () => {
                   bounce: 0.3,
                    duration: 0.5
                 }}
-                 className='w-4/5 h-screen absolute flex justify-center items-center top-0 right-0 z-40 bg-primary shadow-2xl font-NotoSerif'>
+                 className='w-4/5 h-screen absolute flex justify-center items-center top-0 right-0 z-40 bg-gradient-to-r from-primary to-[#222222] shadow-nav-shadow shadow-2xl font-NotoSerif'>
                     <RxCross2 className='absolute top-4 left-4 text-secondary text-xl cursor-pointer font-bold' onClick={handleSidebarClose}
                     />
                     <ul className='flex flex-col justify-between items-center gap-16 text-xl font-Ubuntu text-secondary font-bold'>
