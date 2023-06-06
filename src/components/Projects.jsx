@@ -8,9 +8,10 @@ const Projects = () => {
           data.map((data)=>{
             return(
               <div key={data.id} className="h-[20rem] w-full">
-                <a href={data.href} target="_blank">
-                  <img src={data.source} alt="" className="w-3/4 mx-auto rounded-md"></img>
-                  <p className="text-secondary w-3/4 mx-auto uppercase text-center">{data.title}</p>
+                <a href={data.href} target="_blank" rel="noreferrer">
+                  <img src={data.source} alt="" className="w-4/5 mx-auto rounded-md"></img>
+                  <p className="text-secondary w-4/5 mx-auto uppercase text-center">{data.title}</p>
+                  <p className="text-secondary w-4/5 mx-auto text-center text-sm mt-4">{data.description}</p>
                 </a>
               </div>
             )
