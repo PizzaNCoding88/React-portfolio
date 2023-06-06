@@ -1,64 +1,60 @@
 [
-    {
-        "id": 1,
-        "title": "YT Web Design Crash Course - Final Project",
-        "source": "../src/images/project-1.jpg",
-        "href" : "https://pizzancoding88.github.io/WebDesign-Course-Assignment---Portfolio-Website/"
-        
-    },
-    {
-        "id": 2,
-        "title": "HTML, CSS, JS Clock",
-        "source": "./src/images/project-2.jpg",
-        "href" : "https://pizzancoding88.github.io/Analog-Digital-Clock/"
-    },
-    {
-        "id": 3,
-        "title": "Kevin POwell's Responsive Design COurse - Final Assignment",
-        "source": "./src/images/project-3.jpg",
-        "href": "https://pizzancoding88.github.io/Repsonsive-Layout-Course--final-challenge/"
-    },
-    {
-        "id": 4,
-        "title": "Frontend Mentor Challenge - Accordion",
-        "source": "./src/images/project-4.jpg"
-    },
-    {
-        "id": 5,
-        "title": "HTML, CSS, JS Image Gallery",
-        "source": "./src/images/project-5.jpg"
-    },
-    {
-        "id": 6,
-        "title": "Frontend Mentor Challenge - Form",
-        "source": "./src/images/project-6.jpg"
-    },
-    {
-        "id": 7,
-        "title": "HTML, CSS, JS Calculator",
-        "source": "./src/images/project-7.jpg"
-    },
-    {
-        "id": 8,
-        "title": "Frontend Mentor Challenge - Newspage",
-        "source": "./src/images/project-8.jpg"
-    },
-    {
-        "id": 9,
-        "title": "Frontend Mentor Challenge - Rating Component",
-        "source": "./src/images/project-9.jpg"
-    },
-    {
-        "id": 10,
-        "title": "Frontend Mentor Challenge - Card component",
-        "source": "./src/images/project-10.jpg"
-    },
-    {
-        "id": 11,
-        "title": "Frontend Mentor Challenge - Product Card",
-        "source": "./src/images/project-11.jpg"
-    }
-    
+  {
+    "id": 1,
+    "title": "YT Web Design Crash Course - Final Project",
+    "source": "/assets/project-1.jpg",
+    "href": "https://pizzancoding88.github.io/WebDesign-Course-Assignment---Portfolio-Website/"
+  },
+  {
+    "id": 2,
+    "title": "HTML, CSS, JS Clock",
+    "source": "src/images/project-2.jpg",
+    "href": "https://pizzancoding88.github.io/Analog-Digital-Clock/"
+  },
+  {
+    "id": 3,
+    "title": "Kevin POwell's Responsive Design COurse - Final Assignment",
+    "source": "../src/images/project-3.jpg",
+    "href": "https://pizzancoding88.github.io/Repsonsive-Layout-Course--final-challenge/"
+  },
+  {
+    "id": 4,
+    "title": "Frontend Mentor Challenge - Accordion",
+    "source": "../src/images/project-4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "HTML, CSS, JS Image Gallery",
+    "source": "../src/images/project-5.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Frontend Mentor Challenge - Form",
+    "source": "../src/images/project-6.jpg"
+  },
+  {
+    "id": 7,
+    "title": "HTML, CSS, JS Calculator",
+    "source": "../src/images/project-7.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Frontend Mentor Challenge - Newspage",
+    "source": "../src/images/project-8.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Frontend Mentor Challenge - Rating Component",
+    "source": "../src/images/project-9.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Frontend Mentor Challenge - Card component",
+    "source": "../src/images/project-10.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Frontend Mentor Challenge - Product Card",
+    "source": "../src/images/project-11.jpg"
+  }
 ]
-
-

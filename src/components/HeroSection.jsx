@@ -10,9 +10,7 @@ const HeroSection = () => {
             <h1 className='text-center text-5xl uppercase leading-10 font-bold text-secondary drop-shadow-2xl'>Umberto</h1>
             <p className='text-right mt-5 text-secondary font-bold text-xl'>Web Dev</p>
         </div>
-        <p className="text-secondary text-center absolute bottom-4 left-1/2 -translate-x-1/2 uppercase text-sm">Projects</p>
-        <RxCaretDown className=" absolute bottom-0 text-secondary animate-bounce" />
-      
+        <RxCaretDown className=" absolute bottom-0 text-secondary animate-bounce text-2xl" />
     </div>
     </>
   )
