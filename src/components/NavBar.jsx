@@ -13,7 +13,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-primary to-[#222222]">
+    <div className="bg-gradient-to-r from-primary to-[#222222]" id="home">
       <div className="flex justify-between items-center w-4/5 py-6 mx-auto">
         <div className=" font-NotoSerif font-semibold text-secondary text-3xl">
           UN
@@ -57,10 +57,12 @@ const NavBar = () => {
                     onClick={handleSidebarClose}
                   />
                   <ul className="flex flex-col justify-between items-center gap-16 text-xl font-Ubuntu text-secondary font-bold">
-                    <a href="#home">
+                    <a href="#home" onClick={handleSidebarClose}>
                       <li>Home</li>
                     </a>
-                    <li>Projects</li>
+                    <a href="#projects" onClick={handleSidebarClose}>
+                      <li>Projects</li>
+                    </a>
                     <li>Contact</li>
                   </ul>
                 </motion.div>
