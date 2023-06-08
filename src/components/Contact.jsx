@@ -1,23 +1,34 @@
 import React from "react";
+import TextareaAutosize from "react-textarea-autosize";
 
 const Contact = () => {
   return (
-    <section>
-      <div className="bg-secondary w-4/5 h-[1px] mx-auto"></div>
-      <h2 className="text-secondary font-bold text-center my-4 text-xl">
-        Get In Touch
-      </h2>
-      <form>
-        <label htmlFor="name" className="text-secondary block">
-          Name
-        </label>
+    <section id="contact">
+      <form
+        action=""
+        className=" border-2 border-secondary w-4/5 mx-auto rounded-lg px-8 py-4 my-12"
+      >
         <input
           type="text"
           placeholder="Name"
-          className=" bg-gray-800 border-none placeholder:text-secondary"
-        ></input>
-        <label htmlFor="email">Email</label>
-        <input type="text" placeholder="Email"></input>
+          className=" bg-transparent block border-b border-b-secondary w-full pl-2 pb-2 mb-2 text-secondary placeholder:text-secondary focus:outline-none"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          className="bg-transparent block border-b border-b-secondary w-full pl-2 pb-2 mb-2 text-secondary placeholder:text-secondary focus:outline-none"
+        />
+        <TextareaAutosize
+          minRows={1}
+          maxRows={10}
+          defaultValue="Message"
+          className="bg-transparent block border-b border-b-secondary w-full pl-2 pb-2 mb-2 text-secondary focus:outline-none"
+        />
+        <input
+          type="submit"
+          value="Send"
+          className="text-secondary bg-additional px-8 py-1 rounded-lg block mx-auto"
+        />
       </form>
     </section>
   );

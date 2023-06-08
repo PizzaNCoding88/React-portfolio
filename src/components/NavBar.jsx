@@ -63,7 +63,9 @@ const NavBar = () => {
                     <a href="#projects" onClick={handleSidebarClose}>
                       <li>Projects</li>
                     </a>
-                    <li>Contact</li>
+                    <a href="#contact" onClick={handleSidebarClose}>
+                      <li>Contact</li>
+                    </a>
                   </ul>
                 </motion.div>
               </>

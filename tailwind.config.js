@@ -16,6 +16,15 @@ export default {
         tertiary: "#554E44",
         additional: "#E5E0E0",
       },
+      keyframes: {
+        glow: {
+          from: { textShadow: "0 0 30px rgb(235,89,57) " },
+          to: { textShadow: "0 0 50px rgb(235,89,57)" },
+        },
+      },
+      animation: {
+        glow: "glow 1.5s ease-in-out infinite alternate",
+      },
     },
   },
   plugins: [],

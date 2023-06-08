@@ -22,15 +22,35 @@ const Projects = () => {
                   transition={{ duration: 1 }}
                   variants={{
                     visible: { opacity: 1, x: 0 },
-                    hidden: { opacity: 0, x: -160 },
+                    hidden: { opacity: 0, x: 160 },
                   }}
                 ></motion.img>
-                <p className="text-secondary w-4/5 mx-auto uppercase text-center mt-2 font-bold">
+                <motion.p
+                  className="text-secondary w-4/5 mx-auto uppercase text-center mt-2 font-bold"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  transition={{ duration: 1 }}
+                  variants={{
+                    visible: { opacity: 1, x: 0 },
+                    hidden: { opacity: 0, x: -160 },
+                  }}
+                >
                   {data.title}
-                </p>
-                <p className="text-secondary w-4/5 mx-auto text-center text-sm mt-4 font-thin">
+                </motion.p>
+                <motion.p
+                  className="text-secondary w-4/5 mx-auto text-center text-sm mt-4 font-thin"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                  variants={{
+                    visible: { opacity: 1, x: 0 },
+                    hidden: { opacity: 0, x: -160 },
+                  }}
+                >
                   {data.description}
-                </p>
+                </motion.p>
               </a>
             </div>
           );
