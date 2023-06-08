@@ -6,7 +6,7 @@ const Contact = () => {
     <section id="contact">
       <form
         action=""
-        className=" border-2 border-secondary w-4/5 mx-auto rounded-lg px-8 py-4 my-12"
+        className="w-4/5 mx-auto rounded-lg px-8 py-4 my-12 shadow-3xl "
       >
         <input
           type="text"
