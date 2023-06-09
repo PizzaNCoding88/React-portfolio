@@ -3,14 +3,12 @@ import { motion } from "framer-motion";
 const Projects = () => {
   return (
     <>
-      <section>
+      <section className="overflow-x-hidden">
         {data.map((data) => {
           return (
             <div
               key={data.id}
-              className={`w-full ${
-                data.id === 1 ? "pt-8" : "mt-8"
-              } overflow-x-hidden`}
+              className={`w-full ${data.id === 1 ? "pt-8" : "mt-8"}`}
               id="projects"
             >
               <a href={data.href} target="_blank" rel="noreferrer">
