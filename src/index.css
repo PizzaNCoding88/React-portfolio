@@ -18,6 +18,7 @@ body {
   min-height: 100vh;
   background-image: linear-gradient(to right, #0d0d0d, #222222);
   scroll-behavior: smooth;
+  /* overflow-x: hidden; */
 }
 
 html {

@@ -18,8 +18,9 @@ const Contact = () => {
           placeholder="Email"
           className="bg-transparent block border-b border-b-secondary w-full pl-2 pb-2 mb-2 text-secondary placeholder:text-secondary focus:outline-none"
         />
+
         <TextareaAutosize
-          minRows={1}
+          minRows={3}
           maxRows={10}
           defaultValue="Message"
           className="bg-transparent block border-b border-b-secondary w-full pl-2 pb-2 mb-2 text-secondary focus:outline-none"

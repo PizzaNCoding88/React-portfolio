@@ -8,7 +8,9 @@ const Projects = () => {
           return (
             <div
               key={data.id}
-              className={`w-full ${data.id === 1 ? "pt-8" : "mt-8"}`}
+              className={`w-full ${
+                data.id === 1 ? "pt-8" : "mt-8"
+              } overflow-x-hidden`}
               id="projects"
             >
               <a href={data.href} target="_blank" rel="noreferrer">
