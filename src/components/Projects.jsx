@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Projects = () => {
   return (
     <>
-      <section>
+      <section className="overflow-x-hidden">
         {data.map((data) => {
           return (
             <div
