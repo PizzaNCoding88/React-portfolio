@@ -39,7 +39,7 @@ const Projects = () => {
                   {data.title}
                 </motion.p>
                 <motion.p
-                  className="text-secondary w-4/5 mx-auto text-center text-sm mt-4 font-thin"
+                  className="text-secondary w-4/5 mx-auto text-center text-sm mt-4 "
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
