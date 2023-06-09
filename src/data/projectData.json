@@ -10,52 +10,71 @@
     "id": 2,
     "title": "HTML, CSS, JS Clock",
     "source": "/assets/project-2.jpg",
-    "href": "https://pizzancoding88.github.io/Analog-Digital-Clock/"
+    "href": "https://pizzancoding88.github.io/Analog-Digital-Clock/",
+    "description" : "An analog/digital clock with dark/light mode switch and geolocation"
   },
   {
     "id": 3,
-    "title": "Kevin POwell's Responsive Design COurse - Final Assignment",
+    "title": "Kevin Powell's Responsive Design COurse - Final Assignment",
     "source": "/assets/project-3.jpg",
-    "href": "https://pizzancoding88.github.io/Repsonsive-Layout-Course--final-challenge/"
+    "href": "https://pizzancoding88.github.io/Repsonsive-Layout-Course--final-challenge/",
+    "description" : "Final assignment of Kevin Powell's free course on responsive designs"
   },
   {
     "id": 4,
     "title": "Frontend Mentor Challenge - Accordion",
-    "source": "/assets/project-4.jpg"
+    "source": "/assets/project-4.jpg",
+    "href" : "https://pizzancoding88.github.io/Frontend-Mentor-FAQ-Accordion/",
+    "description" : "A Frontend mentor challenge - Build and accordion"
   },
   {
     "id": 5,
-    "title": "HTML, CSS, JS Image Gallery",
-    "source": "/assets/project-5.jpg"
+    "title": "HTML, CSS, JS Image Carousel",
+    "source": "/assets/project-5.jpg",
+    "href" : "https://pizzancoding88.github.io/JS-Image-Carousel/",
+    "description" : "An image carousel built with HTMl, CSS, Vanilla Javascript and particles.js library"
   },
   {
     "id": 6,
     "title": "Frontend Mentor Challenge - Form",
-    "source": "/assets/project-6.jpg"
+    "source": "/assets/project-6.jpg",
+    "href" : "https://pizzancoding88.github.io/intro-component-with-signup-form/",
+    "description" : "A Frontend mentor challenge - Build a form"
   },
   {
     "id": 7,
     "title": "HTML, CSS, JS Calculator",
-    "source": "/assets/project-7.jpg"
+    "source": "/assets/project-7.jpg",
+    "href" : "https://pizzancoding88.github.io/Calculator/",
+    "description" : "An HTML, CSS and Vanilla Javascript calculator with dark/light mode switch"
   },
   {
     "id": 8,
     "title": "Frontend Mentor Challenge - Newspage",
-    "source": "/assets/project-8.jpg"
+    "source": "/assets/project-8.jpg",
+    "href" : "https://pizzancoding88.github.io/Frontend-Mentor-Newspage/",
+    "description" : "A Frontend mentor challenge - Build a newspage"
   },
   {
     "id": 9,
     "title": "Frontend Mentor Challenge - Rating Component",
-    "source": "/assets/project-9.jpg"
+    "source": "/assets/project-9.jpg",
+    "href" : "https://pizzancoding88.github.io/interactive-rating-component-main/",
+    "description" : "A Frontend mentor challenge - Build a rating component"
+    
   },
   {
     "id": 10,
-    "title": "Frontend Mentor Challenge - Card component",
-    "source": "/assets/project-10.jpg"
+    "title": "Frontend Mentor Challenge - Stats Preview Card Component",
+    "source": "/assets/project-10.jpg",
+    "href" : "https://pizzancoding88.github.io/stats-preview-card/",
+    "description" : "A Frontend mentor challenge - Build a stats preview card component"
   },
   {
     "id": 11,
     "title": "Frontend Mentor Challenge - Product Card",
-    "source": "/assets/project-11.jpg"
+    "source": "/assets/project-11.jpg",
+    "href" : "https://pizzancoding88.github.io/Frontend-Mentor-Challenge---Product-Card/",
+    "description" : "A Frontend mentor challenge - Build a product card"
   }
 ]

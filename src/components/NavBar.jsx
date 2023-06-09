@@ -38,17 +38,15 @@ const NavBar = () => {
 
                 <motion.div
                   key="navbar"
-                  initial={{ x: "200%", opacity: 0, scale: 0 }}
-                  animate={{ x: 0, opacity: 1, scale: 1 }}
+                  initial={{ x: "200%", opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
                   exit={{
                     x: "200%",
                     opacity: 0,
                     transition: { duration: 0.2 },
                   }}
                   transition={{
-                    type: "spring",
-                    bounce: 0.3,
-                    duration: 0.5,
+                    duration: 0.2,
                   }}
                   className="w-4/5 h-screen absolute flex justify-center items-center top-0 right-0 z-40 bg-gradient-to-r from-primary to-[#222222] shadow-nav-shadow font-NotoSerif"
                 >
