@@ -3,20 +3,20 @@ import { RxCaretDown } from "react-icons/rx";
 const HeroSection = () => {
   return (
     <>
-      <div className="h-[calc(100vh-5.25rem)] flex justify-center items-center font-Ubuntu relative">
-        <div className='before:content-["UN"] before:text-[15rem] before:text-additional before:absolute before:top-[50%] before:left-[50%] before:-translate-x-1/2 before:-translate-y-1/2 before:font-bold before:z-0 before:drop-shadow-xl before:blur-[1px] before:[text-shadow:_0_0_40px_rgb(235,89,57)] before:animate-glow'></div>
+      <div className="h-[calc(100vh-5.25rem)] flex justify-center items-center font-Ubuntu relative ">
+        <div className='before:content-["UN"] before:text-[15rem] before:text-additional before:absolute before:top-[50%] before:left-[50%] before:-translate-x-1/2 before:-translate-y-1/2 before:font-bold before:z-0 before:drop-shadow-xl before:blur-[1px] before:[text-shadow:_0_0_40px_rgb(235,89,57)] before:animate-glow sm:before:text-[25rem]'></div>
         <div className="w-4/5 z-20">
-          <p className="text-left mb-20 text-secondary font-bold text-xl">
+          <p className="text-left mb-20 text-secondary font-bold text-xl sm:mb-32">
             Frontend
           </p>
           <h1 className="text-center text-5xl uppercase leading-10 font-bold text-secondary drop-shadow-2xl">
             Umberto
           </h1>
-          <p className="text-right mt-20 text-secondary font-bold text-xl">
+          <p className="text-right mt-20 text-secondary font-bold text-xl sm:mt-32">
             Web Dev
           </p>
         </div>
-        <RxCaretDown className=" absolute bottom-0 text-secondary animate-bounce text-2xl" />
+        <RxCaretDown className=" absolute bottom-0 text-secondary animate-bounce text-2xl " />
       </div>
     </>
   );
