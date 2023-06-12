@@ -13,12 +13,25 @@ const NavBar = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-primary to-[#222222]" id="home">
+    <nav className="bg-gradient-to-r from-primary to-[#222222]" id="home">
       <div className="flex justify-between items-center w-4/5 py-6 mx-auto">
         <div className=" font-NotoSerif font-semibold text-secondary text-3xl">
           UN
         </div>
-        <div className="">
+        <div>
+          <ul className="sm:flex flex-row justify-between items-center gap-8 text-xl font-Ubuntu text-secondary font-bold hidden ">
+            <a href="#home">
+              <li>Home</li>
+            </a>
+            <a href="#projects">
+              <li>Projects</li>
+            </a>
+            <a href="#contact">
+              <li>Contact</li>
+            </a>
+          </ul>
+        </div>
+        <div className="sm:hidden">
           <RxHamburgerMenu
             className="text-3xl text-secondary"
             onClick={handleSidebarOpen}
@@ -71,7 +84,7 @@ const NavBar = () => {
           </AnimatePresence>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
