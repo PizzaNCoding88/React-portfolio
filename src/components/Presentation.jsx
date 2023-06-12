@@ -7,6 +7,11 @@ const avatarVariants = {
   hidden: { opacity: 0, scale: 0.5 },
 };
 
+const boxVariants = {
+  visible: { opacity: 1, transition: { duration: 1 } },
+  hidden: { opacity: 0 },
+};
+
 const Presentation = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -15,25 +20,28 @@ const Presentation = () => {
       controls.start("visible");
     }
   }, [controls, inView]);
+
   return (
     <>
-      <section className=" h-screen">
+      <section className="h-screen">
         <div className="w-4/5 mx-auto flex justify-center flex-col h-full">
-          <h1 className="text-secondary text-center text-2xl font-bold">
-            Building the web that I like
-          </h1>
-          <h2 className=" text-slate-400 opacity-90 text-center mt-12 font-extralight">
-            Umberto Nardiello
-          </h2>
-          <motion.img
-            src="/assets/avatar.jpeg"
-            alt="avatar"
-            className=" rounded-3xl mt-12"
-            variants={avatarVariants}
-            initial="hidden"
-            animate={controls}
-            ref={ref}
-          ></motion.img>
+          <div className="sm:border-8 sm:border-secondary sm:p-8 sm:rounded-2xl">
+            <h1 className="text-secondary text-center text-2xl font-bold sm:text-4xl ">
+              Building the web that I like
+            </h1>
+            <h2 className=" text-slate-400 opacity-90 text-center mt-12 font-extralight italic sm:text-xl">
+              Umberto Nardiello
+            </h2>
+            <motion.img
+              src="/assets/avatar.jpeg"
+              alt="avatar"
+              className=" rounded-3xl mt-12 sm:w-[25rem] mr-8 sm:mx-auto"
+              variants={avatarVariants}
+              initial="hidden"
+              animate={controls}
+              ref={ref}
+            ></motion.img>
+          </div>
         </div>
       </section>
     </>

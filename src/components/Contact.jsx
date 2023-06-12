@@ -3,10 +3,13 @@ import TextareaAutosize from "react-textarea-autosize";
 
 const Contact = () => {
   return (
-    <section id="contact">
+    <section id="contact" className=" sm:max-w-[70%] sm:mx-auto">
+      <h3 className="text-center text-secondary mt-12 mb-8 font-bold text-xl md:text-2xl">
+        Have you got a project in mind? Let's discuss it
+      </h3>
       <form
         action=""
-        className="w-4/5 mx-auto rounded-lg px-8 py-4 my-12 shadow-3xl "
+        className="w-4/5 mx-auto rounded-lg px-8 py-4 mb-12 shadow-3xl "
       >
         <input
           type="text"

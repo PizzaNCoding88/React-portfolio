@@ -4,11 +4,16 @@ const Projects = () => {
   return (
     <>
       <section className="overflow-x-hidden">
+        <h2 className="text-secondary text-xl text-center font-bold">
+          Personal Projects
+        </h2>
         {data.map((data) => {
           return (
             <div
               key={data.id}
-              className={`w-full ${data.id === 1 ? "pt-8" : "mt-8"}`}
+              className={`w-full ${
+                data.id === 1 ? "pt-8" : "mt-8"
+              } sm:w-9/12 sm:mx-auto`}
               id="projects"
             >
               <a href={data.href} target="_blank" rel="noreferrer">
