@@ -7,11 +7,6 @@ const avatarVariants = {
   hidden: { opacity: 0, scale: 0.5 },
 };
 
-const boxVariants = {
-  visible: { opacity: 1, transition: { duration: 1 } },
-  hidden: { opacity: 0 },
-};
-
 const Presentation = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -25,7 +20,7 @@ const Presentation = () => {
     <>
       <section className="h-screen">
         <div className="w-4/5 mx-auto flex justify-center flex-col h-full">
-          <div className="sm:border-8 sm:border-secondary sm:p-8 sm:rounded-2xl">
+          <div className="sm:border-8 sm:border-secondary sm:p-8 sm:rounded-2xl sm:animate-fadeIn">
             <h1 className="text-secondary text-center text-2xl font-bold sm:text-4xl ">
               Building the web that I like
             </h1>

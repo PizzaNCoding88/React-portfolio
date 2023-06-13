@@ -27,7 +27,7 @@ const NavBar = () => {
               <li>Projects</li>
             </a>
             <a href="#contact">
-              <li>Contact</li>
+              <li className=" bg-additional px-8 py-1 rounded-lg">Contact</li>
             </a>
           </ul>
         </div>

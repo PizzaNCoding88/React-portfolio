@@ -1,5 +1,5 @@
 // import React from "react";
-import { LuTwitter, LuLinkedin, LuInstagram } from "react-icons/lu";
+import { LuTwitter, LuLinkedin, LuGithub } from "react-icons/lu";
 import { MdCopyright } from "react-icons/md";
 
 const Footer = () => {
@@ -21,11 +21,11 @@ const Footer = () => {
             <LuTwitter />
           </a>
           <a
-            href="https://www.instagram.com/pizza_e_dintorni_1/"
+            href="https://github.com/PizzaNCoding88"
             target="_blank"
             rel="noreferrer"
           >
-            <LuInstagram />
+            <LuGithub />
           </a>
           <a
             href="https://uk.linkedin.com/in/umberto-nardiello-5633a152"
