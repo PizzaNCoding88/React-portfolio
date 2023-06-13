@@ -17,6 +17,7 @@ const Footer = () => {
             href="https://twitter.com/dj_stewie"
             target="_blank"
             rel="noreferrer"
+            className="hover:opacity-80 hover:scale-110"
           >
             <LuTwitter />
           </a>
@@ -24,6 +25,7 @@ const Footer = () => {
             href="https://github.com/PizzaNCoding88"
             target="_blank"
             rel="noreferrer"
+            className="hover:opacity-80 hover:scale-110"
           >
             <LuGithub />
           </a>
@@ -31,6 +33,7 @@ const Footer = () => {
             href="https://uk.linkedin.com/in/umberto-nardiello-5633a152"
             target="_blank"
             rel="noreferrer"
+            className="hover:opacity-80 hover:scale-110"
           >
             <LuLinkedin />
           </a>

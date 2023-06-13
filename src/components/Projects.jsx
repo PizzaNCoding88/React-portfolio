@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Projects = () => {
   return (
     <>
-      <section className="overflow-x-hidden w-4/5 mx-auto pb-4 ">
+      <section className="overflow-x-hidden w-4/5 mx-auto pb-4 " id="projects">
         <h2 className="text-secondary text-xl text-center font-bold mb-8">
           Personal Projects
         </h2>
@@ -17,7 +17,6 @@ const Projects = () => {
                 } ${
                   data.id === 11 ? "lg:col-span-2" : ""
                 } sm:w-9/12 sm:mx-auto shadow-3xl rounded-md p-8 lg:w-[95%] lg:flex lg:justify-center lg:items-center`}
-                id="projects"
               >
                 <a href={data.href} target="_blank" rel="noreferrer">
                   <motion.img

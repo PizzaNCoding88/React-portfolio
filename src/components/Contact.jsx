@@ -34,7 +34,8 @@ const Contact = () => {
         <input
           type="submit"
           value="Send"
-          className="text-secondary bg-additional px-8 py-1 rounded-lg block mx-auto"
+          className="text-secondary bg-transparent border-2 border-secondary px-8 py-1 rounded-lg block mx-auto hover:bg-secondary hover:text-additional
+          transition-all duration-300"
         />
       </form>
     </section>

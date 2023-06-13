@@ -20,14 +20,20 @@ const NavBar = () => {
         </div>
         <div>
           <ul className="sm:flex flex-row justify-between items-center gap-8 text-xl font-Ubuntu text-secondary font-bold hidden ">
-            <a href="#home">
+            <a href="#home" className="group/home">
               <li>Home</li>
             </a>
-            <a href="#projects">
+            <a href="#projects" className=" group-hover/home:after-">
               <li>Projects</li>
             </a>
-            <a href="#contact">
-              <li className=" bg-additional px-8 py-1 rounded-lg">Contact</li>
+            <a
+              href="#contact"
+              className="rounded-md px-3.5 py-2 overflow-hidden relative group cursor-pointer border-2 font-medium border-secondary text-secondary "
+            >
+              <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-secondary top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+              <span className="relative text-secondary transition duration-300 group-hover:text-white ease">
+                Contact
+              </span>
             </a>
           </ul>
         </div>
