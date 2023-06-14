@@ -69,7 +69,7 @@ const Projects = () => {
                       Go to Site{" "}
                       <LuArrowRight className="text-secondary inline ml-4 pb-[0.15rem] align-middle group-hover:translate-x-2 group-hover:text-white transition-transform duration-300" />
                     </a>
-                    <LuGithub className="text-secondary text-lg hover:opacity-80 hover:scale-[1.2] duration-200" />
+                    <LuGithub className="text-secondary text-lg hover:opacity-80 hover:scale-[1.2] hover:text-white duration-200" />
                   </div>
                 </a>
               </div>
@@ -77,6 +77,30 @@ const Projects = () => {
           })}
         </div>
       </section>
+      <div className="flex flex-col gap-4 items-center border-1 shadow-2xl md:flex-row md:justify-between md:gap-0">
+        <motion.img
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          variants={{
+            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: -160 },
+          }}
+          src="https://images.unsplash.com/photo-1654157925394-4b7809721149?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1460&q=80"
+          className="w-full md:w-[60%]"
+        ></motion.img>
+        <div className="text-secondary text-center mr-52">
+          <p>Heading</p>
+          <p>Description</p>
+          <div className="flex items-center gap-8">
+            <button className="border-2 border-secondary px-2 py-1">
+              Site
+            </button>
+            <LuGithub />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
