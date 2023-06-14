@@ -1,5 +1,7 @@
 import data from "../data/projectData";
 import { motion } from "framer-motion";
+import { LuGithub, LuArrowRight } from "react-icons/lu";
+
 const Projects = () => {
   return (
     <>
@@ -58,6 +60,17 @@ const Projects = () => {
                   >
                     {data.description}
                   </motion.p>
+                  <div className="flex justify-between items-center mt-12 gap-12 px-32">
+                    <a
+                      href={data.href}
+                      className="text-secondary bg-transparent border-2 border-secondary pl-4 pr-[0.75rem] py-1 rounded-lg hover:bg-secondary hover:text-additional
+          transition-all duration-300 group"
+                    >
+                      Go to Site{" "}
+                      <LuArrowRight className="text-secondary inline ml-4 pb-[0.15rem] align-middle group-hover:translate-x-2 group-hover:text-white transition-transform duration-300" />
+                    </a>
+                    <LuGithub className="text-secondary text-lg hover:opacity-80 hover:scale-[1.2] duration-200" />
+                  </div>
                 </a>
               </div>
             );
