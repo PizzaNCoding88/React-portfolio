@@ -3,13 +3,17 @@ import { motion } from "framer-motion";
 import { LuGithub, LuArrowRight } from "react-icons/lu";
 
 const Projects = () => {
+  const windowWidth = window.innerWidth;
   return (
     <>
-      <section className="overflow-x-hidden w-4/5 mx-auto pb-4 " id="projects">
+      <section
+        className="overflow-x-hidden w-4/5 mx-auto sm:w-full pb-4"
+        id="projects"
+      >
         <h2 className="text-secondary text-xl text-center font-bold mb-8">
           Personal Projects
         </h2>
-        <div key="1" className="lg:grid lg:grid-cols-2 lg:grid-rows-6 lg:gap-4">
+        {/* <div key="1" className="lg:grid lg:grid-cols-2 lg:grid-rows-6 lg:gap-4">
           {data.map((data) => {
             return (
               <div
@@ -75,32 +79,70 @@ const Projects = () => {
               </div>
             );
           })}
-        </div>
+        </div> */}
+        {data.map((data) => {
+          return (
+            <div
+              className={`${data.id % 2 === 0 ? "" : "flex-row-reverse"} ${
+                windowWidth < 640 ? "flex-col" : "flex-row"
+              }  flex gap-4 items-center border-1 shadow-3xl md:shadow-2xl md:justify-between md:gap-2 mb-8 pb-4`}
+              key={data.id}
+            >
+              <motion.img
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+                variants={{
+                  visible: { opacity: 1, x: 0 },
+                  hidden: { opacity: 0, x: -160 },
+                }}
+                src={data.source}
+                className="w-full sm:w-[60%] sm:h-100%"
+              ></motion.img>
+              <div className="text-secondary text-center">
+                <motion.p
+                  className="uppercase font-bold mb-4 text-md"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  transition={{ duration: 1 }}
+                  variants={{
+                    visible: { opacity: 1, x: 0 },
+                    hidden: { opacity: 0, x: 160 },
+                  }}
+                >
+                  {data.title}
+                </motion.p>
+                <motion.p
+                  className="text-sm mb-4"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  transition={{ duration: 1 }}
+                  variants={{
+                    visible: { opacity: 1, x: 0 },
+                    hidden: { opacity: 0, x: 160 },
+                  }}
+                >
+                  {data.description}
+                </motion.p>
+                <div className="flex flex-col items-center justify-center gap-8">
+                  <a href={data.href} target="_blank" rel="noreferrer">
+                    <button className="border-2 border-secondary px-4 py-2 rounded-lg group hover:bg-secondary hover:text-additional transition-all duration-300">
+                      Link{" "}
+                      <LuArrowRight className="text-secondary inline pb-1 group-hover:translate-x-2 group-hover:text-additional transition-all duration-300" />
+                    </button>
+                  </a>
+                  <a href="">
+                    <LuGithub className=" hover:scale-125 hover:opacity-70 transition-all duration-200" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </section>
-      <div className="flex flex-col gap-4 items-center border-1 shadow-2xl md:flex-row md:justify-between md:gap-0">
-        <motion.img
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          variants={{
-            visible: { opacity: 1, x: 0 },
-            hidden: { opacity: 0, x: -160 },
-          }}
-          src="https://images.unsplash.com/photo-1654157925394-4b7809721149?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1460&q=80"
-          className="w-full md:w-[60%]"
-        ></motion.img>
-        <div className="text-secondary text-center mr-52">
-          <p>Heading</p>
-          <p>Description</p>
-          <div className="flex items-center gap-8">
-            <button className="border-2 border-secondary px-2 py-1">
-              Site
-            </button>
-            <LuGithub />
-          </div>
-        </div>
-      </div>
     </>
   );
 };
