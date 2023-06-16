@@ -24,7 +24,7 @@ export default {
       keyframes: {
         glow: {
           from: { textShadow: "0 0 30px rgb(235,89,57) " },
-          to: { textShadow: "0 0 50px rgb(235,89,57)" },
+          to: { textShadow: "0 0 80px rgb(235,89,57)" },
         },
       },
       animation: {
