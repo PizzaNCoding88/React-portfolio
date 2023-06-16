@@ -85,7 +85,7 @@ const Projects = () => {
             <div
               className={`${data.id % 2 === 0 ? "flex-row-reverse" : ""} ${
                 windowWidth < 640 ? "flex-col" : "flex-row"
-              } flex gap-4 pb-4 items-center border-1 shadow-3xl md:gap-0 mb-8  md:mb-8 w-4/5 mx-auto md:shadow-projects-shadow rounded-lg overflow-hidden md:pb-0 md:justify-center md:align-middle`}
+              } flex gap-4 pb-4 items-center border-1 shadow-3xl md:gap-0 mb-8  md:mb-8 w-4/5 mx-auto md:shadow-projects-shadow rounded-lg overflow-hidden md:pb-0 md:justify-center md:align-middle lg:max-w-[70%]`}
               key={data.id}
             >
               <motion.img
