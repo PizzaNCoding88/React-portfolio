@@ -11,17 +11,20 @@ const Contact = () => {
         Have you got a project in mind? Let&#39;s talk
       </h3>
       <form
-        action=""
+        action="https://formsubmit.co/umbertonardiello@gmail.com"
+        method="POST"
         className="w-4/5 mx-auto rounded-lg px-8 py-4 mb-12 shadow-3xl sm:max-w-[65%] lg:max-w-[50%]"
       >
         <input
           type="text"
           placeholder="Name"
+          name="name"
           className=" bg-transparent block border-b border-b-secondary w-full pl-2 pb-2 mb-2 text-secondary placeholder:text-secondary focus:outline-none"
         />
         <input
           type="email"
           placeholder="Email"
+          name="email"
           className="bg-transparent block border-b border-b-secondary w-full pl-2 pb-2 mb-2 text-secondary placeholder:text-secondary focus:outline-none"
         />
 
@@ -29,6 +32,7 @@ const Contact = () => {
           minRows={3}
           maxRows={10}
           defaultValue="Message"
+          name="message"
           className="bg-transparent block border-b border-b-secondary w-full pl-2 pb-2 mb-2 text-secondary focus:outline-none"
         />
         <input

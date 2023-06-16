@@ -22,6 +22,10 @@ export default {
         additional: "#E5E0E0",
       },
       keyframes: {
+        fade: {
+          from: { opacity: 0 },
+          to: { opacity: 1 },
+        },
         glow: {
           from: { textShadow: "0 0 30px rgb(235,89,57) " },
           to: { textShadow: "0 0 80px rgb(235,89,57)" },
@@ -30,6 +34,7 @@ export default {
       animation: {
         glow: "glow 1.5s ease-in-out infinite alternate",
         fadeIn: "fadeIn_1s_ease-in-out",
+        fade: "fade_2s_ease-in-our",
       },
       backgroundImage: {
         bgImg: "url('dist/assets/bg.jpg')",
