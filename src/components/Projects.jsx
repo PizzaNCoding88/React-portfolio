@@ -85,7 +85,7 @@ const Projects = () => {
             <div
               className={`${data.id % 2 === 0 ? "flex-row-reverse" : ""} ${
                 windowWidth < 640 ? "flex-col" : "flex-row"
-              } flex gap-4 pb-4 md:pb-0 items-center border-1 shadow-3xl md:gap-0 mb-8  md:mb-8 w-4/5 mx-auto md:shadow-projects-shadow rounded-lg overflow-hidden`}
+              } flex gap-4 pb-4 items-center border-1 shadow-3xl md:gap-0 mb-8  md:mb-8 w-4/5 mx-auto md:shadow-projects-shadow rounded-lg overflow-hidden md:pb-0 md:justify-center md:align-middle`}
               key={data.id}
             >
               <motion.img
@@ -112,7 +112,9 @@ const Projects = () => {
                 }}
               >
                 <p className="uppercase font-bold mb-4 text-md">{data.title}</p>
-                <p className="text-sm mb-4">{data.description}</p>
+                <p className="text-sm mb-4 text-slate-300">
+                  {data.description}
+                </p>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
                   <a href={data.href} target="_blank" rel="noreferrer">
                     <button className="border-2 border-secondary px-4 py-1 rounded-lg group hover:bg-secondary hover:text-additional transition-all duration-300">
@@ -121,7 +123,10 @@ const Projects = () => {
                     </button>
                   </a>
                   <a href="">
-                    <LuGithub className=" hover:scale-125 hover:opacity-70 transition-all duration-200" />
+                    <button className="border-2 border-secondary px-4 py-1 rounded-lg group hover:bg-secondary hover:text-additional transition-all duration-300">
+                      GitHub
+                      <LuGithub className="text-secondary text-xl pb-1 inline pl-2 group-hover:scale-125 group-hover:text-additional transition-all duration-300" />
+                    </button>
                   </a>
                 </div>
               </motion.div>

@@ -15,11 +15,11 @@ const NavBar = () => {
   return (
     <nav className="bg-gradient-to-r from-primary to-[#222222]" id="home">
       <div className="flex justify-between items-center w-4/5 py-6 mx-auto">
-        <div className=" font-NotoSerif font-semibold text-secondary text-3xl">
+        <div className=" font-Sanchez font-semibold text-secondary text-3xl">
           UN
         </div>
         <div>
-          <ul className="sm:flex flex-row justify-between items-center gap-8 text-xl font-Ubuntu text-secondary font-bold hidden ">
+          <ul className="sm:flex flex-row justify-between items-center gap-8 text-xl font-LibreFranklin text-secondary font-bold hidden ">
             <a href="#home" className="group/home">
               <li>Home</li>
             </a>
@@ -57,12 +57,12 @@ const NavBar = () => {
 
                 <motion.div
                   key="navbar"
-                  initial={{ x: "200%", opacity: 0 }}
+                  initial={{ x: "150%", opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   exit={{
-                    x: "200%",
+                    x: "150%",
                     opacity: 0,
-                    transition: { duration: 0.2 },
+                    transition: { duration: 0.1 },
                   }}
                   transition={{
                     duration: 0.2,
@@ -73,7 +73,7 @@ const NavBar = () => {
                     className="absolute top-4 left-4 text-secondary text-xl cursor-pointer font-bold"
                     onClick={handleSidebarClose}
                   />
-                  <ul className="flex flex-col justify-between items-center gap-16 text-xl font-Ubuntu text-secondary font-bold">
+                  <ul className="flex flex-col justify-between items-center gap-16 text-xl font-LibreFranklin text-secondary font-bold">
                     <a href="#home" onClick={handleSidebarClose}>
                       <li>Home</li>
                     </a>

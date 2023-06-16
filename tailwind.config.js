@@ -5,6 +5,8 @@ export default {
     fontFamily: {
       NotoSerif: ["Noto Serif", "serif"],
       Ubuntu: ["Ubuntu", "sans-serif"],
+      LibreFranklin: ["Libre Franklin", "sans-serif"],
+      Sanchez: ["Sanchez", "serif"],
     },
     extend: {
       boxShadow: {
