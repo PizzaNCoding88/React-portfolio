@@ -7,8 +7,8 @@ const Contact = () => {
       id="contact"
       className=" sm:max-w-[70%] sm:mx-auto lg:flex lg:mt-16 lg:gap-16 lg:items-center"
     >
-      <h3 className="text-center text-secondary mt-12 mb-8 font-bold text-xl md:text-2xl lg:mt-0">
-        Have you got a project in mind? Let&#39;s discuss it
+      <h3 className="text-center text-secondary mt-12 mb-8 font-bold text-xl md:text-2xl lg:mt-0 px-4 sm:px-0">
+        Have you got a project in mind? Let&#39;s talk
       </h3>
       <form
         action=""

@@ -10,7 +10,7 @@ const Projects = () => {
         className="overflow-x-hidden w-4/5 mx-auto sm:w-full pb-4"
         id="projects"
       >
-        <h2 className="text-secondary text-xl text-center font-bold mb-8">
+        <h2 className="text-secondary text-2xl sm:text-4xl text-center font-bold mb-10">
           Personal Projects
         </h2>
         {/* <div key="1" className="lg:grid lg:grid-cols-2 lg:grid-rows-6 lg:gap-4">
@@ -95,10 +95,10 @@ const Projects = () => {
                 transition={{ duration: 1 }}
                 variants={{
                   visible: { opacity: 1, y: 0 },
-                  hidden: { opacity: 0, y: -160 },
+                  hidden: { opacity: 0, y: -110 },
                 }}
                 src={data.source}
-                className="w-full sm:w-[50%] sm:h-100% rounded-lg"
+                className="w-full sm:w-[50%] sm:h-100% rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"
               ></motion.img>
               <motion.div
                 className="text-secondary text-center flex flex-col items-center justify-center sm:w-[50%] md:px-8 px-4"

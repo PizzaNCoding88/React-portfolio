@@ -31,6 +31,9 @@ export default {
         glow: "glow 1.5s ease-in-out infinite alternate",
         fadeIn: "fadeIn_1s_ease-in-out",
       },
+      backgroundImage: {
+        bgImg: "url('dist/assets/bg.jpg')",
+      },
     },
   },
   plugins: [],
