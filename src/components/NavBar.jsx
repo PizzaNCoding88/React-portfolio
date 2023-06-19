@@ -1,6 +1,5 @@
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const NavBar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -15,9 +14,7 @@ const NavBar = () => {
   return (
     <nav className="bg-gradient-to-r from-primary to-[#222222]" id="home">
       <div className="flex justify-between items-center w-4/5 py-6 mx-auto">
-        <div className=" font-Sanchez font-semibold text-secondary text-3xl">
-          UN
-        </div>
+        <div className=" font-Sanchez text-secondary text-3xl">UN</div>
         <div>
           <ul className="sm:flex flex-row justify-between items-center gap-8 text-xl font-LibreFranklin text-secondary font-bold hidden ">
             <a href="#home" className="relative group/home">
@@ -47,51 +44,58 @@ const NavBar = () => {
             onClick={handleSidebarOpen}
           />
 
-          <AnimatePresence>
-            {sidebarOpen && (
-              <>
-                <motion.div
-                  className="h-screen w-screen bg-primary opacity-90 absolute top-0 left-0 bottom-0 z-30"
-                  key="overlay"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0, transition: { duration: 0.1 } }}
-                  onClick={handleSidebarClose}
-                ></motion.div>
+          <div
+            className={`h-screen bg-primary opacity-90 absolute top-0 right-0 bottom-0 z-30 ${
+              sidebarOpen ? "w-screen" : "w-0"
+            } transition-all duration-300`}
+            onClick={handleSidebarClose}
+          ></div>
 
-                <motion.div
-                  key="navbar"
-                  initial={{ x: "150%", opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  exit={{
-                    x: "150%",
-                    opacity: 0,
-                    transition: { duration: 0.1 },
-                  }}
-                  transition={{
-                    duration: 0.2,
-                  }}
-                  className="w-4/5 h-screen absolute flex justify-center items-center top-0 right-0 z-40 bg-gradient-to-r from-primary to-[#222222] shadow-nav-shadow font-NotoSerif"
-                >
-                  <RxCross2
-                    className="absolute top-4 left-4 text-secondary text-xl cursor-pointer font-bold"
-                    onClick={handleSidebarClose}
-                  />
-                  <ul className="flex flex-col justify-between items-center gap-16 text-xl font-LibreFranklin text-secondary font-bold">
-                    <a href="#home" onClick={handleSidebarClose}>
-                      <li>Home</li>
-                    </a>
-                    <a href="#projects" onClick={handleSidebarClose}>
-                      <li>Projects</li>
-                    </a>
-                    <a href="#contact" onClick={handleSidebarClose}>
-                      <li>Contact</li>
-                    </a>
-                  </ul>
-                </motion.div>
-              </>
-            )}
-          </AnimatePresence>
+          <div
+            className={`h-screen absolute flex justify-center items-center top-0 right-0 z-40 bg-gradient-to-r from-primary to-[#222222] shadow-nav-shadow font-Sanchez ${
+              sidebarOpen ? "w-4/5" : "w-0"
+            } transition-all duration-300 overflow-x-hidden `}
+          >
+            <RxCross2
+              className="absolute top-4 left-4 text-secondary text-xl cursor-pointer font-bold"
+              onClick={handleSidebarClose}
+            />
+            <ul
+              className={`flex flex-col justify-between items-center gap-16 text-xl font-Sanchez text-secondary font-bold `}
+            >
+              <a
+                href="#home"
+                onClick={handleSidebarClose}
+                className={`${
+                  sidebarOpen ? "translate-x-0" : "translate-x-48"
+                } transition-all duration-500`}
+              >
+                <li>Home</li>
+              </a>
+              <a
+                href="#projects"
+                onClick={handleSidebarClose}
+                className={`${
+                  sidebarOpen ? "translate-x-0" : "translate-x-48"
+                } transition-all duration-500 delay-100`}
+              >
+                <li>Projects</li>
+              </a>
+              <a
+                href="#contact"
+                onClick={handleSidebarClose}
+                className={`${
+                  sidebarOpen ? "translate-x-0" : "translate-x-48"
+                } transition-all duration-700 delay-200`}
+              >
+                <li>Contact</li>
+              </a>
+            </ul>
+          </div>
+          {/* </> */}
+          {/* )} */}
+
+          {/* --------------------- */}
         </div>
       </div>
     </nav>
