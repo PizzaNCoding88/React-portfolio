@@ -17,11 +17,16 @@ const NavBar = () => {
         <div className=" font-Sanchez text-secondary text-3xl">UN</div>
         <div>
           <ul className="sm:flex flex-row justify-between items-center gap-8 text-xl font-LibreFranklin text-secondary font-bold hidden ">
-            <a href="#home" className="relative group/home">
+            {/* <a href="#home" className="relative group/home">
               <li className="before:w-0 before:h-1 before:absolute before:-bottom-3 before:rounded-md before:bg-secondary group-hover/home:before:w-full before:transition-all before:duration-300 hover:opacity-90 transition-opacity duration-300">
                 Home
               </li>
-            </a>
+            </a> */}
+            <li className="before:w-0 before:h-1 before:absolute before:-bottom-3 before:rounded-md before:bg-secondary hover:before:w-full before:transition-all before:duration-300 hover:opacity-90 transition-opacity duration-300">
+              <a href="#home" className="relative">
+                Home
+              </a>
+            </li>
             <a href="#projects" className="relative group/projects">
               <li className="before:w-0 before:h-1 before:absolute before:-bottom-3 before:rounded-md before:bg-secondary group-hover/projects:before:w-full before:transition-all before:duration-300  hover:opacity-90 transition-opacity duration-300">
                 Projects

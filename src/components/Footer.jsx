@@ -18,6 +18,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
             className="hover:opacity-80 hover:scale-110"
+            aria-label="Twitter"
           >
             <LuTwitter />
           </a>
@@ -26,6 +27,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
             className="hover:opacity-80 hover:scale-110"
+            aria-label="GitHub"
           >
             <LuGithub />
           </a>
@@ -34,6 +36,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
             className="hover:opacity-80 hover:scale-110"
+            aria-label="LinkedIn"
           >
             <LuLinkedin />
           </a>

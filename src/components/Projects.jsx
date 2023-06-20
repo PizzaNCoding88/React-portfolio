@@ -32,6 +32,7 @@ const Projects = () => {
                 }}
                 src={data.source}
                 className="w-full sm:w-[50%] sm:h-100% rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"
+                alt={`Project${data.id} picture`}
               ></motion.img>
               <motion.div
                 className="text-secondary text-center flex flex-col items-center justify-center sm:w-[50%] md:px-8 px-4"

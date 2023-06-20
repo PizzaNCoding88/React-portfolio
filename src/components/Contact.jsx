@@ -28,12 +28,16 @@ const Contact = () => {
           className="bg-transparent block border-b border-b-secondary w-full pl-2 pb-2 mb-2 text-secondary placeholder:text-secondary focus:outline-none"
         />
 
+        <label htmlFor="textarea" className="text-secondary pl-2">
+          Message
+        </label>
         <TextareaAutosize
           minRows={3}
           maxRows={10}
-          defaultValue="Message"
-          name="message"
+          // defaultValue="Message"
+          // name="message"
           className="bg-transparent block border-b border-b-secondary w-full pl-2 pb-2 mb-2 text-secondary focus:outline-none"
+          id="textarea"
         />
         <input
           type="submit"
