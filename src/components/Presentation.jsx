@@ -19,12 +19,12 @@ const Presentation = () => {
   return (
     <>
       <section className="h-screen">
-        <div className="w-4/5 mx-auto flex justify-center flex-col h-full ">
+        <div className="w-[75%] mx-auto flex justify-center flex-col h-full ">
           <div className="sm:border-8 sm:border-secondary sm:p-8 sm:rounded-2xl sm:animate-fadeIn">
-            <h1 className="text-secondary text-center  font-bold text-2xl sm:text-4xl font-LibreFranklin ">
+            <h1 className="text-secondary text-center  font-bold text-2xl sm:text-4xl font-PrimaryF ">
               Building the web that I like
             </h1>
-            <h2 className=" text-slate-300 opacity-90 text-center mt-12 font-extralight italic sm:text-xl">
+            <h2 className=" text-slate-300 opacity-90 text-center mt-12 font-extralight italic sm:text-xl font-SingatureF lg:text-3xl">
               Umberto Nardiello
             </h2>
             <motion.img

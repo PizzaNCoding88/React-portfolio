@@ -1,4 +1,3 @@
-// import React from "react";
 import { LuTwitter, LuLinkedin, LuGithub } from "react-icons/lu";
 import { MdCopyright } from "react-icons/md";
 
@@ -10,9 +9,11 @@ const Footer = () => {
       <div className="sm:flex sm:justify-center sm:items-center sm:py-4">
         <div className="w-4/5 mt-4 flex justify-center items-center mx-auto text-secondary sm:mt-0">
           <MdCopyright className=" mr-1 pt-1 text-lg" />
-          <p className="text-sm sm:text-base">2023 - Umberto Nardiello</p>
+          <p className="text-sm sm:text-base xl:text-lg font-SecondaryF">
+            2023 - Umberto Nardiello
+          </p>
         </div>
-        <div className=" text-secondary text-sm sm:text-base w-4/5 my-4 flex justify-center gap-8 items-center mx-auto sm:my-0">
+        <div className=" text-secondary text-sm sm:text-base w-4/5 my-4 flex justify-center gap-8 items-center mx-auto sm:my-0 xl:text-lg">
           <a
             href="https://twitter.com/dj_stewie"
             target="_blank"

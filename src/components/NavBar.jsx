@@ -14,33 +14,27 @@ const NavBar = () => {
   return (
     <nav className="bg-gradient-to-r from-primary to-[#222222]" id="home">
       <div className="flex justify-between items-center w-4/5 py-6 mx-auto">
-        <div className=" font-Sanchez text-secondary text-3xl">UN</div>
+        <div className=" font-SecondaryF text-secondary text-3xl lg:text-4xl xl:text-4xl">
+          UN
+        </div>
         <div>
-          <ul className="sm:flex flex-row justify-between items-center gap-8 text-xl font-LibreFranklin text-secondary font-bold hidden ">
-            {/* <a href="#home" className="relative group/home">
-              <li className="before:w-0 before:h-1 before:absolute before:-bottom-3 before:rounded-md before:bg-secondary group-hover/home:before:w-full before:transition-all before:duration-300 hover:opacity-90 transition-opacity duration-300">
-                Home
-              </li>
-            </a> */}
-            <li className="before:w-0 before:h-1 before:absolute before:-bottom-3 before:rounded-md before:bg-secondary hover:before:w-full before:transition-all before:duration-300 hover:opacity-90 transition-opacity duration-300">
-              <a href="#home" className="relative">
-                Home
-              </a>
+          <ul className="sm:flex flex-row justify-between items-center gap-8 text-xl font-PrimaryF text-secondary font-bold hidden ">
+            <li className="relative before:w-0 before:h-1 before:absolute before:-bottom-3 before:rounded-md before:bg-secondary hover:before:w-full before:transition-all before:duration-300 hover:opacity-90 transition-opacity duration-300 lg:text-xl xl:text-2xl">
+              <a href="#home">Home</a>
             </li>
-            <a href="#projects" className="relative group/projects">
-              <li className="before:w-0 before:h-1 before:absolute before:-bottom-3 before:rounded-md before:bg-secondary group-hover/projects:before:w-full before:transition-all before:duration-300  hover:opacity-90 transition-opacity duration-300">
-                Projects
-              </li>
-            </a>
-            <a
+            <li className="relative before:w-0 before:h-1 before:absolute before:-bottom-3 before:rounded-md before:bg-secondary hover:before:w-full before:transition-all before:duration-300 hover:opacity-90 transition-opacity duration-300 lg:text-xl xl:text-2xl">
+              <a href="#projects">Projects</a>
+            </li>
+
+            <li
               href="#contact"
-              className="rounded-md px-3.5 py-2 overflow-hidden relative group cursor-pointer border-2 font-medium border-secondary text-secondary "
+              className="rounded-md px-3.5 py-2 overflow-hidden relative group cursor-pointer border-2 font-medium border-secondary text-secondary lg:text-xl xl:text-2xl"
             >
               <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-secondary top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
               <span className="relative text-secondary transition duration-300 group-hover:text-white ease">
-                Contact
+                <a href="#contact">Contact</a>
               </span>
-            </a>
+            </li>
           </ul>
         </div>
         <div className="sm:hidden">
@@ -57,7 +51,7 @@ const NavBar = () => {
           ></div>
 
           <div
-            className={`h-screen absolute flex justify-center items-center top-0 right-0 z-40 bg-gradient-to-r from-primary to-[#222222] shadow-nav-shadow font-Sanchez ${
+            className={`h-screen absolute flex justify-center items-center top-0 right-0 z-40 bg-gradient-to-r from-primary to-[#222222] shadow-nav-shadow  font-SecondaryF ${
               sidebarOpen ? "w-4/5" : "w-0"
             } transition-all ease-in-out duration-500 overflow-x-hidden `}
           >
@@ -66,7 +60,7 @@ const NavBar = () => {
               onClick={handleSidebarClose}
             />
             <ul
-              className={`flex flex-col justify-between items-center gap-16 text-xl font-Sanchez text-secondary font-bold `}
+              className={`flex flex-col justify-between items-center gap-16 text-xl  font-SecondaryF text-secondary font-bold `}
             >
               <a
                 href="#home"
@@ -97,10 +91,6 @@ const NavBar = () => {
               </a>
             </ul>
           </div>
-          {/* </> */}
-          {/* )} */}
-
-          {/* --------------------- */}
         </div>
       </div>
     </nav>

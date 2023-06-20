@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Libre+Franklin:wght@300;400;500;600;700;800&family=Sanchez:ital@0;1&display=swap");
+
 @tailwind base;
 @media (min-width: 768px) {
   * {
@@ -24,6 +26,9 @@
 :root {
   --primary: #0d0d0d;
   --secondary: #eb5939;
+  --signature-f: "Alex Brush", cursive;
+  --primary-f: "Libre Franklin", sans-serif;
+  --secondary-f: "Sanchez", serif;
 }
 
 *,

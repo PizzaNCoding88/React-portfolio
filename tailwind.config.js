@@ -3,10 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      NotoSerif: ["Noto Serif", "serif"],
-      Ubuntu: ["Ubuntu", "sans-serif"],
-      LibreFranklin: ["Libre Franklin", "sans-serif"],
-      Sanchez: ["Sanchez", "serif"],
+      SingatureF: "var(--signature-f)",
+      PrimaryF: "var(--primary-f)",
+      SecondaryF: "var(--secondary-f)",
     },
     extend: {
       boxShadow: {
