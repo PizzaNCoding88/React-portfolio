@@ -62,33 +62,31 @@ const NavBar = () => {
             <ul
               className={`flex flex-col justify-between items-center gap-16 text-xl  font-SecondaryF text-secondary font-bold `}
             >
-              <a
-                href="#home"
+              <li
                 onClick={handleSidebarClose}
                 className={`${
                   sidebarOpen ? "translate-x-0" : "translate-x-48"
                 } transition-all duration-500`}
               >
-                <li>Home</li>
-              </a>
-              <a
-                href="#projects"
+                <a href="#home">Home</a>
+              </li>
+
+              <li
                 onClick={handleSidebarClose}
                 className={`${
                   sidebarOpen ? "translate-x-0" : "translate-x-48"
                 } transition-all duration-500 delay-100`}
               >
-                <li>Projects</li>
-              </a>
-              <a
-                href="#contact"
+                <a href="#projects">Projects</a>
+              </li>
+              <li
                 onClick={handleSidebarClose}
                 className={`${
                   sidebarOpen ? "translate-x-0" : "translate-x-48"
                 } transition-all duration-700 delay-200`}
               >
-                <li>Contact</li>
-              </a>
+                <a href="#contact">Contact</a>
+              </li>
             </ul>
           </div>
         </div>
