@@ -1,4 +1,5 @@
 import { RxCaretDown } from "react-icons/rx";
+import "../../src/index.css";
 
 const HeroSection = () => {
   return (
@@ -9,7 +10,7 @@ const HeroSection = () => {
           <p className="text-left mb-20 text-secondary font-bold text-xl sm:mb-32 font-LibreFranklin">
             Frontend
           </p>
-          <h1 className="text-center text-5xl uppercase leading-10 font-bold text-secondary drop-shadow-2xl">
+          <h1 className="text-center text-5xl uppercase leading-10 font-bold text-secondary drop-shadow-2xl tracking-wide md:tracking-wider name">
             Umberto
           </h1>
           <p className="text-right mt-20 text-secondary font-bold text-xl sm:mt-32">
