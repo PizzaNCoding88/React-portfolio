@@ -38,33 +38,45 @@ const Contact = () => {
         method="POST"
         className="w-4/5 mx-auto rounded-lg px-8 py-4 mb-12 shadow-3xl sm:max-w-[65%] lg:max-w-[50%]"
       >
-        <input
-          type="text"
-          placeholder="Name"
-          name="name"
-          className=" bg-transparent block border-b border-b-secondary w-full pl-2 pb-2 mb-2 text-secondary placeholder:text-secondary focus:outline-none placeholder:font-PrimaryF"
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          name="email"
-          className="bg-transparent block border-b border-b-secondary w-full pl-2 pb-2 mb-2 text-secondary placeholder:text-secondary focus:outline-none  placeholder:font-PrimaryF"
-        />
-
-        <label htmlFor="textarea" className="text-secondary pl-2 font-PrimaryF">
-          Message
+        <label
+          htmlFor="name"
+          className="text-secondary pl-2 font-PrimaryF relative"
+        >
+          <input
+            id="name"
+            type="text"
+            placeholder="Name"
+            name="name"
+            className=" bg-transparent block border-b border-b-secondary w-full pl-2 pb-2 mb-2 text-secondary focus:outline-none placeholder:text-secondary
+            placeholder:font-PrimaryF"
+          />
+        </label>
+        <label
+          htmlFor="email"
+          className="text-secondary pl-2 font-PrimaryF -translate-x-8"
+        >
+          <input
+            id="email"
+            type="text"
+            placeholder="Email"
+            name="email"
+            className=" bg-transparent block border-b border-b-secondary w-full pl-2 pb-2 mb-2 text-secondary focus:outline-none placeholder:text-secondary
+            placeholder:font-PrimaryF"
+          />
         </label>
         <TextareaAutosize
           minRows={3}
           maxRows={10}
-          className="bg-transparent block border-b border-b-secondary w-full pl-2 pb-2 mb-2 text-secondary focus:outline-none"
           id="textarea"
+          className="bg-transparent block border-b border-b-secondary w-full pl-2 pb-2 mb-5 text-secondary focus:outline-none placeholder:text-secondary
+          placeholder:font-PrimaryF mt-8"
+          placeholder="Message"
         />
         <input
           type="submit"
           value="Send"
           className="text-secondary bg-transparent border-2 border-secondary px-8 py-1 rounded-lg block mx-auto hover:bg-secondary hover:text-additional
-          transition-all duration-300 font-PrimaryF"
+          transition-all duration-300 font-PrimaryF mb-8"
         />
       </form>
     </section>
