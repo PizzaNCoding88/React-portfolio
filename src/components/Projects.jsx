@@ -31,7 +31,7 @@ const Projects = () => {
                   hidden: { opacity: 0, y: -110 },
                 }}
                 src={data.source}
-                className="w-full sm:w-[50%] sm:h-100% rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"
+                className="w-full sm:w-[50%] sm:h-100%"
                 alt={`Project${data.id} picture`}
               ></motion.img>
               <motion.div
