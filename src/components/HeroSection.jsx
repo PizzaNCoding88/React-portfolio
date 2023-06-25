@@ -78,7 +78,7 @@ const HeroSection = () => {
       <div className="h-[calc(100vh-5.25rem)] flex justify-center items-center font-Ubuntu relative">
         <div className='before:content-["UN"] before:text-[13rem] before:text-[#0d0d0d] before:absolute before:top-[50%] before:left-[50%] before:-translate-x-1/2 before:-translate-y-1/2 before:font-bold before:z-0 before:drop-shadow-xl before:blur-[1px] before:[text-shadow:_0_0_40px_rgb(235,89,57)] before:animate-glow sm:before:text-[20rem] before:font-SecondaryF lg:before:text-[25rem] '></div>
         <div className="w-4/5 z-20 flex justify-center items-center relative">
-          <div className="absolute flex justify-center items-center -left-4 mb-4 sm:mb-16 clip1">
+          <div className="absolute flex justify-center items-center -left-4 mb-4 sm:mb-16 lg:mb-32 clip1">
             {frontend.split("").map((letter, i) => {
               return letter === " " ? (
                 <div key={i} className="hero">
@@ -103,7 +103,7 @@ const HeroSection = () => {
             Umberto
           </h1>
 
-          <div className="absolute flex justify-center items-center -right-4 mt-4 sm:mt-16 clip1 ">
+          <div className="absolute flex justify-center items-center -right-4 mt-4 sm:mt-16 lg:mt-32 clip1 ">
             {webDev.split("").map((letter, i) => {
               return letter === " " ? (
                 <div key={i} className="hero1">
