@@ -27,6 +27,12 @@
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
+@layer components {
+  .hero-section {
+    @apply before:content-["UN"] before:text-[13rem] before:text-[#0d0d0d] before:absolute before:top-[50%] before:left-[50%] before:-translate-x-1/2 before:-translate-y-1/2 before:font-bold before:z-0 before:drop-shadow-xl before:blur-[1px] before:[text-shadow:_0_0_40px_rgb(235,89,57)] before:animate-glow sm:before:text-[20rem] before:font-SecondaryF lg:before:text-[25rem];
+  }
+}
+
 :root {
   --primary: #0d0d0d;
   --secondary: #eb5939;
