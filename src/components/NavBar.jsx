@@ -53,7 +53,7 @@ const NavBar = () => {
           <div
             className={`h-screen absolute flex justify-center items-center top-0 right-0 z-40 bg-gradient-to-r from-primary to-[#222222] shadow-nav-shadow  font-SecondaryF ${
               sidebarOpen ? "w-4/5" : "w-0"
-            } transition-all ease-in-out duration-500 overflow-x-hidden `}
+            } transition-all ease-in-out duration-300 overflow-x-hidden `}
           >
             <RxCross2
               className="absolute top-4 left-4 text-secondary text-xl cursor-pointer font-bold"
