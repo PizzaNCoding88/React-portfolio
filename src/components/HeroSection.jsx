@@ -121,7 +121,7 @@ const HeroSection = () => {
             })}
           </div>
         </div>
-        <RxCaretDown className=" absolute bottom-0 text-secondary animate-bounce text-2xl " />
+        <RxCaretDown className=" absolute bottom-4 text-secondary animate-bounce text-2xl lg:text-5xl " />
       </div>
     </>
   );
