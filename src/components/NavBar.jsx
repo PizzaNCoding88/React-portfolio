@@ -12,17 +12,17 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-primary to-[#222222]" id="home">
-      <div className="flex justify-between items-center w-4/5 py-6 mx-auto">
+    <nav id="home">
+      <div className="flex items-center justify-between w-4/5 py-6 mx-auto">
         <div className=" font-SecondaryF text-secondary text-3xl lg:text-4xl xl:text-4xl">
           UN
         </div>
         <div>
           <ul className="sm:flex flex-row justify-between items-center gap-8 text-xl font-PrimaryF text-secondary font-bold hidden ">
-            <li className="relative before:w-0 before:h-1 before:absolute before:-bottom-3 before:rounded-md before:bg-secondary hover:before:w-full before:transition-all before:duration-300 hover:opacity-90 transition-opacity duration-300 lg:text-xl xl:text-2xl">
+            <li className="li-desktop">
               <a href="#home">Home</a>
             </li>
-            <li className="relative before:w-0 before:h-1 before:absolute before:-bottom-3 before:rounded-md before:bg-secondary hover:before:w-full before:transition-all before:duration-300 hover:opacity-90 transition-opacity duration-300 lg:text-xl xl:text-2xl">
+            <li className="li-desktop">
               <a href="#projects">Projects</a>
             </li>
 
@@ -51,7 +51,7 @@ const NavBar = () => {
           ></div>
 
           <div
-            className={`h-screen absolute flex justify-center items-center top-0 right-0 z-40 bg-gradient-to-r from-primary to-[#222222] shadow-nav-shadow  font-SecondaryF ${
+            className={`h-screen absolute flexy top-0 right-0 z-40 bg-gradient-to-r from-primary to-[#222222] shadow-nav-shadow  font-SecondaryF ${
               sidebarOpen ? "w-4/5" : "w-0"
             } transition-all ease-in-out duration-300 overflow-x-hidden `}
           >
@@ -59,9 +59,7 @@ const NavBar = () => {
               className="absolute top-4 left-4 text-secondary text-xl cursor-pointer font-bold"
               onClick={handleSidebarClose}
             />
-            <ul
-              className={`flex flex-col justify-between items-center gap-16 text-xl  font-SecondaryF text-secondary font-bold `}
-            >
+            <ul className="flexy flex-col gap-16 text-xl  font-SecondaryF text-secondary font-bold">
               <li
                 onClick={handleSidebarClose}
                 className={`${
@@ -83,7 +81,7 @@ const NavBar = () => {
                 onClick={handleSidebarClose}
                 className={`${
                   sidebarOpen ? "translate-x-0" : "translate-x-48"
-                } transition-all duration-700 delay-200`}
+                } transition-all duration-500 delay-200`}
               >
                 <a href="#contact">Contact</a>
               </li>

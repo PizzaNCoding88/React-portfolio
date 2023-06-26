@@ -31,6 +31,34 @@
   .hero-section {
     @apply before:content-["UN"] before:text-[13rem] before:text-[#0d0d0d] before:absolute before:top-[50%] before:left-[50%] before:-translate-x-1/2 before:-translate-y-1/2 before:font-bold before:z-0 before:drop-shadow-xl before:blur-[1px] before:[text-shadow:_0_0_40px_rgb(235,89,57)] before:animate-glow sm:before:text-[20rem] before:font-SecondaryF lg:before:text-[25rem];
   }
+
+  .flexy {
+    @apply flex justify-center items-center;
+  }
+
+  .li-desktop {
+    @apply relative before:w-0 before:h-1 before:absolute before:-bottom-3 before:rounded-md before:bg-secondary hover:before:w-full before:transition-all before:duration-300 hover:opacity-90 transition-opacity duration-300 lg:text-xl xl:text-2xl;
+  }
+
+  .projects-container {
+    @apply flex gap-4 pb-4 items-center shadow-3xl md:gap-0 mb-8  md:mb-8 w-4/5 mx-auto md:shadow-projects-shadow rounded-lg overflow-hidden md:pb-0 md:justify-center md:align-middle lg:max-w-[70%] font-SecondaryF;
+  }
+
+  .projects-button {
+    @apply border-2 border-secondary px-4 py-1 rounded-lg hover:bg-secondary hover:text-additional transition-all duration-300 xl:px-8 xl:py-2 xl:text-xl;
+  }
+
+  .projects-button__icons {
+    @apply text-secondary inline pb-1 group-hover:translate-x-2 group-hover:text-additional transition-all duration-300 xl:text-xl;
+  }
+
+  .form-input {
+    @apply bg-transparent block border-b border-b-secondary w-full pl-2 pb-2 mb-2 text-secondary focus:outline-none placeholder:text-secondary placeholder:font-PrimaryF;
+  }
+
+  .form-links {
+    @apply hover:opacity-80 hover:scale-110;
+  }
 }
 
 :root {

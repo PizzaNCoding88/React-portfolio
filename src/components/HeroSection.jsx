@@ -34,10 +34,10 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="h-[calc(100vh-5.25rem)] flex justify-center items-center font-Ubuntu relative">
+      <div className="h-[calc(100vh-5.25rem)] flexy font-Ubuntu relative">
         <div className="hero-section"></div>
-        <div className="w-4/5 z-20 flex justify-center items-center relative">
-          <div className="absolute flex justify-center items-center -left-4 mb-4 sm:mb-16 lg:mb-32 clip1">
+        <div className="w-4/5 z-20 flexy relative">
+          <div className="absolute flexy -left-4 mb-4 sm:mb-16 lg:mb-32 clip1">
             {frontend.split("").map((letter, i) => {
               return letter === " " ? (
                 <div key={i} className="hero">
@@ -62,7 +62,7 @@ const HeroSection = () => {
             Umberto
           </h1>
 
-          <div className="absolute flex justify-center items-center -right-4 mt-4 sm:mt-16 lg:mt-32 clip1 ">
+          <div className="absolute flexy -right-4 mt-4 sm:mt-16 lg:mt-32 clip1 ">
             {webDev.split("").map((letter, i) => {
               return letter === " " ? (
                 <div key={i} className="hero1">
