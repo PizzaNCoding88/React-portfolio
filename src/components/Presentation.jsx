@@ -1,20 +1,26 @@
 import { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-
-const avatarVariants = {
-  visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
-  hidden: { opacity: 0, scale: 0.5 },
-};
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 const Presentation = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
+  gsap.registerPlugin(ScrollTrigger);
+
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
+    gsap.fromTo(
+      ".img",
+      { y: 100, scale: 0 },
+      {
+        y: 0,
+        scale: 1,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: "h2",
+          start: "top 70%",
+          end: "bottom bottom",
+        },
+      }
+    );
+  }, []);
 
   return (
     <>
@@ -27,15 +33,11 @@ const Presentation = () => {
             <h2 className=" text-slate-300 opacity-90 text-center mt-12 font-extralight italic sm:text-xl font-SingatureF lg:text-3xl">
               Umberto Nardiello
             </h2>
-            <motion.img
+            <img
               src="/assets/avatar.jpeg"
               alt="avatar"
-              className=" rounded-3xl mt-12 sm:w-[25rem] mr-8 sm:mx-auto"
-              variants={avatarVariants}
-              initial="hidden"
-              animate={controls}
-              ref={ref}
-            ></motion.img>
+              className=" rounded-3xl mt-12 sm:w-[25rem] mr-8 sm:mx-auto img"
+            ></img>
           </div>
         </div>
       </section>
