@@ -34,7 +34,7 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="h-[calc(100vh-5.25rem)] flexy font-Ubuntu relative">
+      <div className="h-[calc(100dvh-5.25rem)] flexy relative">
         <div className="hero-section"></div>
         <div className="w-4/5 z-20 flexy relative">
           <div className="absolute flexy -left-4 mb-4 sm:mb-16 lg:mb-32 clip1">
