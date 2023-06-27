@@ -14,19 +14,28 @@ const Projects = () => {
     const triggers = document.querySelectorAll(".projects-container");
     triggers.forEach((container) => {
       let image = container.querySelector(".projectImg");
+      let description = container.querySelector(".description")
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: container,
           start: "top: 95%",
-          markers: true,
+
         },
       });
 
       tl.fromTo(
         image,
         { y: -100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: "power1.inOut" }
+        { y: 0, opacity: 1, duration: 1, ease: "slow(0.7, 0.7, false)" }
       );
+
+      tl.fromTo(
+        description,
+        { y: 100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: "power1.inOut", delay: -1 }
+      );
+
+      
     });
   });
 
@@ -39,28 +48,12 @@ const Projects = () => {
         key={data.id}
       >
         <img
-          // initial="hidden"
-          // whileInView="visible"
-          // viewport={{ once: true }}
-          // transition={{ duration: 1 }}
-          // variants={{
-          //   visible: { opacity: 1, y: 0 },
-          //   hidden: { opacity: 0, y: -110 },
-          // }}
           src={data.source}
           className="sm:h-100% projectImg w-full sm:w-[50%]"
           alt={`Project${data.id} picture`}
         ></img>
-        <motion.div
-          className="flexy flex-col px-4 text-center text-secondary sm:w-[50%] md:px-8"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          variants={{
-            visible: { opacity: 1, y: 0 },
-            hidden: { opacity: 0, y: 160 },
-          }}
+        <div
+          className="flexy flex-col px-4 text-center text-secondary sm:w-[50%] md:px-8 description"
         >
           <p className="text-md mb-4 font-bold uppercase lg:text-xl xl:pb-8 xl:text-2xl">
             {data.title}
@@ -81,7 +74,7 @@ const Projects = () => {
               </button>
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     );
   });
