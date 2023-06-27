@@ -13,9 +13,10 @@ const Presentation = () => {
         y: 0,
         scale: 1,
         duration: 1.5,
+        ease: "power1.inOut",
         scrollTrigger: {
           trigger: "h2",
-          start: "top 70%",
+          start: "top 90%",
           end: "bottom bottom",
         },
       }

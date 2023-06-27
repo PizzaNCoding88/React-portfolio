@@ -1,9 +1,35 @@
 import data from "../data/projectData";
 import { motion } from "framer-motion";
 import { LuGithub, LuArrowRight } from "react-icons/lu";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { useEffect } from "react";
 
 const Projects = () => {
   const windowWidth = window.innerWidth;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    const triggers = document.querySelectorAll(".projects-container");
+    triggers.forEach((container) => {
+      let image = container.querySelector(".projectImg");
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+          start: "top: 95%",
+          markers: true,
+        },
+      });
+
+      tl.fromTo(
+        image,
+        { y: -100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: "power1.inOut" }
+      );
+    });
+  });
+
   const card = data.map((data) => {
     return (
       <div
@@ -12,21 +38,21 @@ const Projects = () => {
         } projects-container`}
         key={data.id}
       >
-        <motion.img
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          variants={{
-            visible: { opacity: 1, y: 0 },
-            hidden: { opacity: 0, y: -110 },
-          }}
+        <img
+          // initial="hidden"
+          // whileInView="visible"
+          // viewport={{ once: true }}
+          // transition={{ duration: 1 }}
+          // variants={{
+          //   visible: { opacity: 1, y: 0 },
+          //   hidden: { opacity: 0, y: -110 },
+          // }}
           src={data.source}
-          className="w-full sm:w-[50%] sm:h-100%"
+          className="sm:h-100% projectImg w-full sm:w-[50%]"
           alt={`Project${data.id} picture`}
-        ></motion.img>
+        ></img>
         <motion.div
-          className="text-secondary text-center flexy flex-col sm:w-[50%] md:px-8 px-4"
+          className="flexy flex-col px-4 text-center text-secondary sm:w-[50%] md:px-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -36,13 +62,13 @@ const Projects = () => {
             hidden: { opacity: 0, y: 160 },
           }}
         >
-          <p className="uppercase font-bold mb-4 text-md lg:text-xl xl:text-2xl xl:pb-8">
+          <p className="text-md mb-4 font-bold uppercase lg:text-xl xl:pb-8 xl:text-2xl">
             {data.title}
           </p>
-          <p className="text-sm mb-4 text-slate-300 xl:text-lg xl:pb-8 font-PrimaryF">
+          <p className="mb-4 font-PrimaryF text-sm text-slate-300 xl:pb-8 xl:text-lg">
             {data.description}
           </p>
-          <div className="flexy flex-col md:flex-row gap-4 md:gap-8">
+          <div className="flexy flex-col gap-4 md:flex-row md:gap-8">
             <a href={data.href} target="_blank" rel="noreferrer">
               <button className="projects-button group">
                 Link <LuArrowRight className="projects-button__icons" />
@@ -62,10 +88,10 @@ const Projects = () => {
   return (
     <>
       <section
-        className="overflow-x-hidden w-4/5 mx-auto sm:w-full pb-4"
+        className="mx-auto w-4/5 overflow-x-hidden pb-4 sm:w-full"
         id="projects"
       >
-        <h2 className="text-secondary text-2xl sm:text-4xl text-center font-bold mb-10">
+        <h2 className="mb-10 text-center text-2xl font-bold text-secondary sm:text-4xl">
           Personal Projects
         </h2>
         {card}
