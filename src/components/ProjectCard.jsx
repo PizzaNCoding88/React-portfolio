@@ -20,17 +20,20 @@ const ProjectCard = (props) => {
         },
       });
 
-      tl.fromTo(
-        image,
-        { y: -100, autoAlpha: 0 },
-        { y: 0, autoAlpha: 1, duration: 1.5, ease: "slow(0.7, 0.7, false)" }
-      );
+      tl.to(image, {
+        y: 0,
+        autoAlpha: 1,
+        duration: 1.5,
+        ease: "slow(0.7, 0.7, false)",
+      });
 
-      tl.fromTo(
-        description,
-        { y: 100, autoAlpha: 0 },
-        { y: 0, autoAlpha: 1, duration: 1.5, ease: "power1.inOut", delay: -1.5 }
-      );
+      tl.to(description, {
+        y: 0,
+        autoAlpha: 1,
+        duration: 1.5,
+        ease: "power1.inOut",
+        delay: -1.5,
+      });
     });
   });
   return (
@@ -41,10 +44,10 @@ const ProjectCard = (props) => {
     >
       <img
         src={image}
-        className="sm:h-100% projectImg w-full sm:w-[50%] opacity-0"
+        className="sm:h-100% projectImg w-full sm:w-[50%] opacity-0 -translate-y-full"
         alt={`Project${id} picture`}
       ></img>
-      <div className="flexy flex-col px-4 text-center text-secondary sm:w-[50%] md:px-8 opacity-0 description">
+      <div className="flexy flex-col px-4 text-center text-secondary sm:w-[50%] md:px-8 description opacity-0 translate-y-1/2">
         <p className="text-md mb-4 font-bold uppercase lg:text-xl xl:pb-8 xl:text-2xl">
           {title}
         </p>
