@@ -37,32 +37,32 @@ const ProjectCard = (props) => {
 
   return (
     <div>
-      <div className=" mt-10 mb-4 w-4/5 mx-auto relative group ">
+      <div className=" mt-10 mb-4 w-[95%] mx-auto relative group ">
         <img
           src={image}
           alt=""
-          className="group-hover:blur-[8px] group-hover:opacity-40 group-hover:transition-all group-hover:duration-300 group-hover:ease-out group-hover:scale-[.98] rounded-sm"
+          className="group-hover:blur-[8px] group-hover:opacity-40 group-hover:transition-all group-hover:duration-300 group-hover:ease-out group-hover:scale-[.98] rounded-md"
         />
         <div className="absolute left-[5%] bottom-[5%] w-4/5 ">
-          <p className="text-secondary text-sm uppercase opacity-0 font-bold group-hover:opacity-100 group-hover:transition-all group-hover:duration-1000 group-hover:ease-out mb-2">
+          <p className="text-secondary text-lg uppercase opacity-0 font-bold group-hover:opacity-100 group-hover:transition-all group-hover:duration-1000 group-hover:ease-out mb-2">
             {title}
           </p>
-          <p className="text-additional uppercase text-[0.5rem] opacity-0 group-hover:opacity-100 group-hover:transition-all group-hover:duration-1000 group-hover:ease-out">
+          <p className="text-additional text-sm opacity-0 group-hover:opacity-100 group-hover:transition-all group-hover:duration-1000 group-hover:ease-out">
             {description}
           </p>
         </div>
       </div>
 
-      <div className="w-4/5 mx-auto flex justify-between">
+      <div className="w-[95%] mx-auto flex justify-between">
         <a href={link} target="_blank" rel="noreferrer">
           <button className="hover:text-additional relative before:w-0 before:h-[2px] before:absolute before:-bottom-1 before:rounded-md before:bg-secondary hover:before:w-full before:transition-all before:duration-300  transition-all duration-300 xl:px-8 xl:py-2 xl:text-xl group text-secondary">
-            Link <LuArrowRight className="projects-button__icons" />
+            Link <LuArrowRight className="projects-button__icon" />
           </button>
         </a>
         <a href={repo} target="_blank" rel="noreferrer">
-          <button className="hover:text-additional relative before:w-0 before:h-[2px] before:absolute before:-bottom-1 before:rounded-md before:bg-secondary hover:before:w-full before:transition-all before:duration-300  transition-all duration-300 xl:px-8 xl:py-2 xl:text-xl group text-secondary hover:-translate-x-2">
+          <button className="hover:text-additional relative before:w-0 before:h-[2px] before:absolute before:-bottom-1 before:rounded-md before:bg-secondary hover:before:w-full before:transition-all before:duration-300  transition-all duration-500 xl:px-8 xl:py-2 xl:text-xl group text-secondary  mr-1">
             GitHub
-            <LuGithub className="projects-button__icons ml-1" />
+            <LuGithub className="projects-button__icon" />
           </button>
         </a>
       </div>
