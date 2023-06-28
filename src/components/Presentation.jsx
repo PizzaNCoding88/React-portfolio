@@ -1,27 +1,3 @@
-// import { useEffect } from "react";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/all";
-
-// const Presentation = () => {
-//   gsap.registerPlugin(ScrollTrigger);
-
-//   useEffect(() => {
-//     gsap.fromTo(
-//       ".img",
-//       { y: 100, scale: 0 },
-//       {
-//         y: 0,
-//         scale: 1,
-//         duration: 1.5,
-//         ease: "power1.inOut",
-//         scrollTrigger: {
-//           trigger: "h2",
-//           start: "top 90%",
-//           end: "bottom bottom",
-//         },
-//       }
-//     );
-//   }, []);
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -30,29 +6,22 @@ const Presentation = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    let tl1 = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".h2",
-        start: "top 170%",
-        // end: "bottom bottom",
-        scrub: true,
-        // markers: true,
-      },
-    });
-
-    tl1.from(".img", {
-      height: 0,
-      autoAlpha: 0,
-      duration: 1,
-    });
-    tl1.to(".img", {
-      height: "auto",
-      autoAlpha: 1,
-
-      duration: 1,
-    });
+    gsap.fromTo(
+      ".img",
+      { y: 100, scale: 0 },
+      {
+        y: 0,
+        scale: 1,
+        duration: 1.5,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: "h2",
+          start: "top 90%",
+          end: "bottom bottom",
+        },
+      }
+    );
   }, []);
-
   return (
     <>
       <section className="h-screen">
