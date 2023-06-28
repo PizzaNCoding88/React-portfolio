@@ -36,7 +36,7 @@ export default {
         fade: "fade_2s_ease-in-our",
       },
       backgroundImage: {
-        bgImg: "url('dist/assets/bg.jpg')",
+        bgImg: "url('../public/assets/project-1.webp')",
       },
     },
   },
