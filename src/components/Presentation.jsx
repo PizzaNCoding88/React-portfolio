@@ -36,7 +36,7 @@ const Presentation = () => {
         start: "top 170%",
         // end: "bottom bottom",
         scrub: true,
-        markers: true,
+        // markers: true,
       },
     });
 
