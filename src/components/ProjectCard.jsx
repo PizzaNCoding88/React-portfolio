@@ -36,7 +36,7 @@ const ProjectCard = (props) => {
   // });
 
   return (
-    <div>
+    <div className="mb-14">
       <div className=" mt-10 mb-4 w-[95%] mx-auto relative group shadow-projects-shadow hover:shadow-projects-shadow-1 transition-shadow duration-300 ">
         <img
           src={image}
