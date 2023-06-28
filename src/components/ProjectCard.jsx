@@ -11,29 +11,29 @@ const ProjectCard = (props) => {
   const { image, title, description, link, repo, id } = props;
   gsap.registerPlugin(ScrollTrigger);
 
-  useEffect(() => {
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: container.current,
-        start: "top: 95%",
-      },
-    });
+  // useEffect(() => {
+  //   let tl = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: container.current,
+  //       start: "top: 95%",
+  //     },
+  //   });
 
-    tl.to(img.current, {
-      y: 0,
-      autoAlpha: 1,
-      duration: 1.5,
-      ease: "slow(0.7, 0.7, false)",
-    });
+  //   tl.to(img.current, {
+  //     y: 0,
+  //     autoAlpha: 1,
+  //     duration: 1.5,
+  //     ease: "slow(0.7, 0.7, false)",
+  //   });
 
-    tl.to(descr.current, {
-      y: 0,
-      autoAlpha: 1,
-      duration: 1.5,
-      ease: "power1.inOut",
-      delay: -1.5,
-    });
-  });
+  //   tl.to(descr.current, {
+  //     y: 0,
+  //     autoAlpha: 1,
+  //     duration: 1.5,
+  //     ease: "power1.inOut",
+  //     delay: -1.5,
+  //   });
+  // });
 
   return (
     <div
