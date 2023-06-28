@@ -28,10 +28,10 @@ const Presentation = () => {
       <section className="h-screen">
         <div className="w-[75%] mx-auto flex justify-center flex-col h-full ">
           <div className="sm:border-8 sm:border-secondary sm:p-8 sm:rounded-2xl sm:animate-fadeIn">
-            <h1 className="text-secondary text-center  font-bold text-2xl sm:text-4xl font-PrimaryF ">
-              Building the web that I like
+            <h1 className="text-secondary text-center  font-bold text-xl sm:text-2xl font-PrimaryF ">
+              Building Experiences, Crafting Connections
             </h1>
-            <h2 className=" text-slate-300 opacity-90 text-center mt-12 font-extralight italic sm:text-xl font-SingatureF lg:text-3xl">
+            <h2 className=" text-slate-300 opacity-90 text-center mt-12 font-extralight italic sm:text-xl font-SingatureF lg:text-2xl">
               Umberto Nardiello
             </h2>
             <img

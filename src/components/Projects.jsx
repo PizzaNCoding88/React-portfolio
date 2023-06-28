@@ -16,7 +16,7 @@ const Projects = () => {
         className="mx-auto w-4/5 overflow-x-hidden pb-4 sm:w-full"
         id="projects"
       >
-        <h2 className="mb-10 text-center text-2xl font-bold text-secondary sm:text-4xl">
+        <h2 className="my-10 xl:mt-4 text-center text-2xl font-bold text-secondary sm:text-4xl">
           Personal Projects
         </h2>
         {card}
