@@ -12,7 +12,7 @@ export default {
         "nav-shadow": "20px 35px 60px -15px rgba(229,224,224)",
         "3xl":
           "0px 1px 2px 0px rgba(235, 89, 57, .3),1px 2px 4px 0px rgba(235, 89, 57, .3),2px 3px 8px 0px rgba(235, 89, 57, .3),2px 3px 16px 0px rgba(235, 89, 57, .3);",
-        "projects-shadow": "0px 0px 20px 0px rgba(229, 224, 224, 0.3)",
+        "projects-shadow": "0px 0px 5px 0px rgba(229, 224, 224, 0.3)",
       },
       colors: {
         primary: "#0D0D0D",

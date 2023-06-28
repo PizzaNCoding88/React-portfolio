@@ -37,7 +37,7 @@ const ProjectCard = (props) => {
 
   return (
     <div>
-      <div className=" mt-10 mb-4 w-[95%] mx-auto relative group ">
+      <div className=" mt-10 mb-4 w-[95%] mx-auto relative group shadow-projects-shadow ">
         <img
           src={image}
           alt=""
