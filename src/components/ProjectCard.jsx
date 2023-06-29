@@ -5,39 +5,46 @@ import { useEffect, useRef } from "react";
 
 const ProjectCard = (props) => {
   const { image, title, description, link, repo, id } = props;
-  // const windowWidth = window.innerWidth;
-  // const img = useRef();
-  // const container = useRef();
-  // const descr = useRef();
-  // gsap.registerPlugin(ScrollTrigger);
-
-  // useEffect(() => {
-  //   let tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: container.current,
-  //       start: "top: 95%",
-  //     },
-  //   });
-
-  //   tl.to(img.current, {
-  //     y: 0,
-  //     autoAlpha: 1,
-  //     duration: 1.5,
-  //     ease: "slow(0.7, 0.7, false)",
-  //   });
-
-  //   tl.to(descr.current, {
-  //     y: 0,
-  //     autoAlpha: 1,
-  //     duration: 1.5,
-  //     ease: "power1.inOut",
-  //     delay: -1.5,
-  //   });
-  // });
+  const img = useRef();
+  const buttonLink = useRef();
+  const buttonGit = useRef();
+  gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: img.current,
+        start: "top 95%",
+      },
+    });
+    tl.to(img.current, { autoAlpha: 1, duration: 3 });
+  });
+  useEffect(() => {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: buttonLink.current,
+        start: "top 95%",
+      },
+    });
+    tl.to(buttonLink.current, {
+      autoAlpha: 1,
+      duration: 0.5,
+      ease: "power3.out",
+      delay: -0.2,
+    });
+    tl.to(buttonGit.current, {
+      autoAlpha: 1,
+      duration: 0.5,
+      ease: "power3.out",
+      delay: -0.55,
+    });
+  });
 
   return (
     <div className="mb-14">
-      <div className=" mt-10 mb-4 w-[95%] mx-auto relative group shadow-projects-shadow hover:shadow-none transition-shadow duration-300 ">
+      <div
+        className=" mt-10 mb-4 w-[95%] mx-auto relative group shadow-projects-shadow hover:shadow-none transition-shadow duration-300 opacity-0 "
+        ref={img}
+      >
         <img
           src={image}
           alt=""
@@ -55,12 +62,18 @@ const ProjectCard = (props) => {
 
       <div className="w-[95%] mx-auto flex justify-between">
         <a href={link} target="_blank" rel="noreferrer">
-          <button className="hover:text-additional relative before:w-0 before:h-[2px] before:absolute before:-bottom-1 before:rounded-md before:bg-secondary hover:before:w-full before:transition-all before:duration-300  transition-all duration-300 xl:px-8 xl:py-2 xl:text-xl group text-secondary">
+          <button
+            className="hover:text-additional relative before:w-0 before:h-[2px] before:absolute before:-bottom-1 before:rounded-md before:bg-secondary hover:before:w-full before:transition-all before:duration-300  transition-all duration-300 xl:px-8 xl:py-2 xl:text-xl group text-secondary opacity-0"
+            ref={buttonLink}
+          >
             Link <LuArrowRight className="projects-button__icon" />
           </button>
         </a>
         <a href={repo} target="_blank" rel="noreferrer">
-          <button className="hover:text-additional relative before:w-0 before:h-[2px] before:absolute before:-bottom-1 before:rounded-md before:bg-secondary hover:before:w-full before:transition-all before:duration-300  transition-all duration-500 xl:px-8 xl:py-2 xl:text-xl group text-secondary  mr-1">
+          <button
+            className="hover:text-additional relative before:w-0 before:h-[2px] before:absolute before:-bottom-1 before:rounded-md before:bg-secondary hover:before:w-full before:transition-all before:duration-300  transition-all duration-500 xl:px-8 xl:py-2 xl:text-xl group text-secondary mr-1 opacity-0"
+            ref={buttonGit}
+          >
             GitHub
             <LuGithub className="projects-button__icon" />
           </button>
