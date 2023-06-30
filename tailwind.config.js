@@ -35,9 +35,6 @@ export default {
         fadeIn: "fadeIn_1s_ease-in-out",
         fade: "fade_2s_ease-in-our",
       },
-      backgroundImage: {
-        bgImg: "url('../public/assets/project-1.webp')",
-      },
     },
   },
   plugins: [],
