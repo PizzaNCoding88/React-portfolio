@@ -40,15 +40,11 @@
     @apply relative before:w-0 before:h-1 before:absolute before:-bottom-3 before:rounded-md before:bg-secondary hover:before:w-full before:transition-all before:duration-300 hover:opacity-90 transition-opacity duration-300 lg:text-xl xl:text-2xl;
   }
 
-  .projects-container {
-    @apply flex gap-4 pb-4 items-center shadow-3xl md:gap-0 mb-8  md:mb-8 w-4/5 mx-auto md:shadow-projects-shadow rounded-lg overflow-hidden md:pb-0 md:justify-center md:align-middle lg:max-w-[70%] font-SecondaryF;
+  .projects-buttons {
+    @apply hover:text-additional relative before:w-0 before:h-[2px] before:absolute before:-bottom-1 before:rounded-md before:bg-secondary hover:before:w-full before:transition-all before:duration-300 transition-all xl:px-8 xl:py-2 xl:text-xl  text-secondary opacity-0;
   }
 
-  .projects-button {
-    @apply border-2 border-secondary px-4 py-1 rounded-lg hover:bg-secondary hover:text-additional transition-all duration-300 xl:px-8 xl:py-2 xl:text-xl;
-  }
-
-  .projects-button__icons {
+  .projects-button__icon {
     @apply text-secondary inline pb-1 group-hover:translate-x-2 group-hover:text-additional transition-all duration-300 xl:text-xl;
   }
 
