@@ -20,7 +20,7 @@
     "title": "Kevin Powell's Responsive Design COurse Assignment",
     "source": "/assets/project-3.webp",
     "href": "https://pizzancoding88.github.io/Repsonsive-Layout-Course--final-challenge/",
-    "description" : "Final assignment of Kevin Powell's free course on responsive designs",
+    "description" : "Final assignment of a responsive design course",
     "repo" : "https://github.com/PizzaNCoding88/Repsonsive-Layout-Course--final-challenge"
   },
   {
@@ -74,10 +74,10 @@
   },
   {
     "id": 10,
-    "title": "Frontend Mentor Challenge - Stats Preview Card Component",
+    "title": "Frontend Mentor Challenge - Stats Preview Card",
     "source": "/assets/project-10.webp",
     "href" : "https://pizzancoding88.github.io/stats-preview-card/",
-    "description" : "A Frontend mentor challenge - Build a stats preview card component",
+    "description" : "A Frontend mentor challenge - Stats preview card component",
     "repo" : "https://github.com/PizzaNCoding88/stats-preview-card"
   },
   {

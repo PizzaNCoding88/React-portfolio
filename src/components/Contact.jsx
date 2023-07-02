@@ -64,7 +64,7 @@ const Contact = () => {
           <input
             type="submit"
             className="text-secondary bg-transparent border-2 border-secondary px-8 py-1 rounded-lg block mx-auto hover:bg-secondary hover:text-additional
-    //       transition-all duration-300 font-PrimaryF mb-8"
+    //       transition-all duration-300 font-PrimaryF mb-8 mt-12"
           />
           <span className=" text-secondary mx-auto text-center block">
             {result}

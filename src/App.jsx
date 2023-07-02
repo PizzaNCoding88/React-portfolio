@@ -28,10 +28,10 @@ function App() {
       {showButton && (
         <a href="#" className="opacity-90">
           <div
-            className="fixed right-1 bottom-1 md:right-8 md:bottom-8 bg-slate-900 rounded-full border-2 p-1 md:p-1 border-secondary animate-bounce opacity-0"
+            className="fixed right-3 bottom-3 md:right-8 md:bottom-8 bg-transparent rounded-full border-2 p-1 md:p-1 border-secondary animate-bounce opacity-0"
             ref={upBtn}
           >
-            <MdKeyboardDoubleArrowUp className="text-secondary text-xs md:text-2xl" />
+            <MdKeyboardDoubleArrowUp className="text-secondary text-lg md:text-2xl" />
           </div>
         </a>
       )}
