@@ -34,7 +34,7 @@ const Presentation = () => {
               Umberto Nardiello
             </h2>
             <img
-              src="/assets/avatar.jpeg"
+              src="/assets/avatar.webp"
               alt="avatar"
               className=" rounded-3xl mt-12 sm:w-[25rem] mr-8 sm:mx-auto img"
             ></img>

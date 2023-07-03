@@ -8,19 +8,6 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
-  // const [showButton, setShowButton] = useState(false);
-  // const upBtn = useRef();
-  // gsap.to(upBtn.current, { autoAlpha: 1, duration: 1.5 });
-  // useEffect(() => {
-  //   const scrollBtnVisibility = () => {
-  //     window.scrollY > 300 ? setShowButton(true) : setShowButton(false);
-  //   };
-  //   window.addEventListener("scroll", scrollBtnVisibility);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", scrollBtnVisibility);
-  //   };
-  // }, []);
   return (
     <>
       <ScrollToTop />
