@@ -12,6 +12,7 @@ const Projects = () => {
         link={data.href}
         repo={data.repo}
         id={data.id}
+        alt={data.alt}
       />
     );
   });

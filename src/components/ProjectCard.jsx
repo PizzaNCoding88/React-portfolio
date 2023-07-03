@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 import data from "../data/projectData";
 
 const ProjectCard = (props) => {
-  const { image, title, description, link, repo, id } = props;
+  const { image, title, description, link, repo, id, alt } = props;
   const img = useRef();
   const buttonLink = useRef();
   const buttonGit = useRef();
@@ -36,7 +36,6 @@ const ProjectCard = (props) => {
       autoAlpha: 1,
       duration: 0.5,
       ease: "power3.out",
-      delay: -0.55,
     });
   });
 
@@ -53,8 +52,8 @@ const ProjectCard = (props) => {
         ref={img}
       >
         <img
+          alt={alt}
           src={image}
-          alt=""
           className="group-hover:blur-[8px] group-hover:opacity-40 group-hover:transition-all group-hover:duration-300 group-hover:ease-out group-hover:scale-[.98] "
         />
         <div className="absolute left-[5%] bottom-[5%] w-4/5 ">
@@ -75,7 +74,13 @@ const ProjectCard = (props) => {
             Link <LuArrowRight className="projects-button__icon" />
           </button>
         </a>
-        <a href={repo} target="_blank" rel="noreferrer">
+        <a
+          href={repo}
+          target="_blank"
+          rel="noreferrer"
+          ref={buttonGit}
+          className="opacity-0"
+        >
           <LuGithub className="projects-button__icon hover:text-white hover:scale-105 transition-all duration-300" />
         </a>
       </div>

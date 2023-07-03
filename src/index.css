@@ -40,10 +40,6 @@
     @apply relative before:w-0 before:h-1 before:absolute before:-bottom-3 before:rounded-md before:bg-secondary hover:before:w-full before:transition-all before:duration-300 hover:opacity-90 transition-opacity duration-300 lg:text-xl xl:text-2xl;
   }
 
-  /* .projects-buttons {
-    @apply hover:text-additional relative before:w-0 before:h-[2px] before:absolute before:-bottom-1 before:rounded-md before:bg-secondary hover:before:w-full before:transition-all before:duration-300 transition-all xl:px-8 xl:py-2 xl:text-xl  text-secondary opacity-0;
-  } */
-
   .projects-buttons {
     @apply hover:text-additional relative hover:before:w-full transition-all xl:px-8 xl:py-2 xl:text-xl  text-secondary opacity-0;
   }

@@ -18,7 +18,7 @@ const NavBar = () => {
           UN
         </div>
         <div>
-          <ul className="sm:flex flex-row justify-between items-center gap-8 text-xl font-PrimaryF text-secondary font-bold hidden ">
+          <ul className="sm:flex flex-row justify-between items-center gap-8 text-xl font-PrimaryF text-secondary font-bold hidden">
             <li className="li-desktop">
               <a href="#home">Home</a>
             </li>

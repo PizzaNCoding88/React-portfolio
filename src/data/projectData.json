@@ -5,7 +5,8 @@
     "source": "/assets/project-1.webp",
     "href": "https://pizzancoding88.github.io/WebDesign-Course-Assignment---Portfolio-Website/",
     "description" : "Final assignment of a YouTube Crash course on Web Design",
-    "repo" : "https://github.com/PizzaNCoding88/WebDesign-Course-Assignment---Portfolio-Website"
+    "repo" : "https://github.com/PizzaNCoding88/WebDesign-Course-Assignment---Portfolio-Website",
+    "alt" : "Project 1 screenshot"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "source": "/assets/project-2.webp",
     "href": "https://pizzancoding88.github.io/Analog-Digital-Clock/",
     "description" : "An analog/digital clock with dark/light mode switch and geolocation",
-    "repo" : "https://github.com/PizzaNCoding88/Analog-Digital-Clock"
+    "repo" : "https://github.com/PizzaNCoding88/Analog-Digital-Clock",
+    "alt" : "Project 2 screenshot"
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "source": "/assets/project-3.webp",
     "href": "https://pizzancoding88.github.io/Repsonsive-Layout-Course--final-challenge/",
     "description" : "Final assignment of a responsive design course",
-    "repo" : "https://github.com/PizzaNCoding88/Repsonsive-Layout-Course--final-challenge"
+    "repo" : "https://github.com/PizzaNCoding88/Repsonsive-Layout-Course--final-challenge",
+    "alt" : "Project 3 screenshot"
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "source": "/assets/project-4.webp",
     "href" : "https://pizzancoding88.github.io/Frontend-Mentor-FAQ-Accordion/",
     "description" : "A Frontend mentor challenge - Build and accordion",
-    "repo" : "https://github.com/PizzaNCoding88/Frontend-Mentor-FAQ-Accordion"
+    "repo" : "https://github.com/PizzaNCoding88/Frontend-Mentor-FAQ-Accordion",
+    "alt" : "Project 4 screenshot"
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "source": "/assets/project-5.webp",
     "href" : "https://pizzancoding88.github.io/JS-Image-Carousel/",
     "description" : "An image carousel built with HTMl, CSS, Vanilla Javascript and particles.js library",
-    "repo" : "https://github.com/PizzaNCoding88/JS-Image-Carousel"
+    "repo" : "https://github.com/PizzaNCoding88/JS-Image-Carousel",
+    "alt" : "Project 5 screenshot"
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "source": "/assets/project-6.webp",
     "href" : "https://pizzancoding88.github.io/intro-component-with-signup-form/",
     "description" : "A Frontend mentor challenge - Build a form",
-    "repo" : "https://github.com/PizzaNCoding88/intro-component-with-signup-form"
+    "repo" : "https://github.com/PizzaNCoding88/intro-component-with-signup-form",
+    "alt" : "Project 6 screenshot"
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "source": "/assets/project-7.webp",
     "href" : "https://pizzancoding88.github.io/Calculator/",
     "description" : "An HTML, CSS and Vanilla Javascript calculator with dark/light mode switch",
-    "repo" : "https://github.com/PizzaNCoding88/Calculator"
+    "repo" : "https://github.com/PizzaNCoding88/Calculator",
+    "alt" : "Project 7 screenshot"
   },
   {
     "id": 8,
@@ -61,7 +68,8 @@
     "source": "/assets/project-8.webp",
     "href" : "https://pizzancoding88.github.io/Frontend-Mentor-Newspage/",
     "description" : "A Frontend mentor challenge - Build a newspage",
-    "repo" : "https://github.com/PizzaNCoding88/Frontend-Mentor-Newspage"
+    "repo" : "https://github.com/PizzaNCoding88/Frontend-Mentor-Newspage",
+    "alt" : "Project 8 screenshot"
   },
   {
     "id": 9,
@@ -69,8 +77,8 @@
     "source": "/assets/project-9.webp",
     "href" : "https://pizzancoding88.github.io/interactive-rating-component-main/",
     "description" : "A Frontend mentor challenge - Build a rating component",
-    "repo" : "https://github.com/PizzaNCoding88/interactive-rating-component-main"
-    
+    "repo" : "https://github.com/PizzaNCoding88/interactive-rating-component-main",
+    "alt" : "Project 9 screenshot"    
   },
   {
     "id": 10,
@@ -78,7 +86,8 @@
     "source": "/assets/project-10.webp",
     "href" : "https://pizzancoding88.github.io/stats-preview-card/",
     "description" : "A Frontend mentor challenge - Stats preview card component",
-    "repo" : "https://github.com/PizzaNCoding88/stats-preview-card"
+    "repo" : "https://github.com/PizzaNCoding88/stats-preview-card",
+    "alt" : "Project 10 screenshot"
   },
   {
     "id": 11,
@@ -86,6 +95,7 @@
     "source": "/assets/project-11.webp",
     "href" : "https://pizzancoding88.github.io/Frontend-Mentor-Challenge---Product-Card/",
     "description" : "A Frontend mentor challenge - Build a product card",
-    "repo" : "https://github.com/PizzaNCoding88/Frontend-Mentor-Challenge---Product-Card"
+    "repo" : "https://github.com/PizzaNCoding88/Frontend-Mentor-Challenge---Product-Card",
+    "alt" : "Project 11 screenshot"
   }
 ]
