@@ -57,10 +57,10 @@ const ProjectCard = (props) => {
           className="group-hover:blur-[8px] group-hover:opacity-40 group-hover:transition-all group-hover:duration-300 group-hover:ease-out group-hover:scale-[.98] "
         />
         <div className="absolute left-[5%] bottom-[5%] w-4/5 ">
-          <h2 className="text-secondary text-lg uppercase opacity-0 font-bold group-hover:opacity-100 group-hover:transition-all group-hover:duration-1000 group-hover:ease-out mb-8 xl:text-xl">
+          <h2 className="text-secondary text-sm sm:text-xl md:text-lg uppercase opacity-0 font-bold group-hover:opacity-100 group-hover:transition-all group-hover:duration-1000 group-hover:ease-out mb-8 xl:text-xl">
             {title}
           </h2>
-          <p className="text-additional text-sm opacity-0 group-hover:opacity-100 group-hover:transition-all group-hover:duration-1000 group-hover:ease-out xl:text-lg">
+          <p className="text-additional text-xs sm:text-lg md:text-sm opacity-0 group-hover:opacity-100 group-hover:transition-all group-hover:duration-1000 group-hover:ease-out xl:text-lg">
             {description}
           </p>
         </div>

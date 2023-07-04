@@ -30,7 +30,7 @@ const NavBar = () => {
               href="#contact"
               className="rounded-md px-3.5 py-2 overflow-hidden relative group cursor-pointer border-2 font-medium border-secondary text-secondary lg:text-xl xl:text-2xl"
             >
-              <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-secondary top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+              <span className="absolute w-64 h-0 transition-all duration-500 origin-center rotate-45 -translate-x-20 bg-secondary top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
               <span className="relative text-secondary transition duration-300 group-hover:text-white ease">
                 <a href="#contact">Contact</a>
               </span>
