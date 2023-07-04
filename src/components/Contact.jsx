@@ -34,6 +34,7 @@ const Contact = () => {
           <label
             htmlFor="name"
             className="text-secondary pl-2 font-PrimaryF relative"
+            aria-label="name"
           >
             <input
               type="text"
@@ -46,6 +47,7 @@ const Contact = () => {
 
           <label
             htmlFor="email"
+            aria-label="email"
             className="text-secondary pl-2 font-PrimaryF -translate-x-8"
           >
             <input
@@ -57,7 +59,7 @@ const Contact = () => {
             />
           </label>
 
-          <label htmlFor="textarea">
+          <label htmlFor="textarea" aria-label="textaread">
             <textarea
               id="textarea"
               name="Text"
