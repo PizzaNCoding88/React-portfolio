@@ -37,7 +37,7 @@ const Contact = () => {
           >
             <input
               type="text"
-              name="name"
+              id="name"
               className="form-input"
               placeholder="Name"
               required
@@ -50,21 +50,25 @@ const Contact = () => {
           >
             <input
               type="email"
-              name="email"
+              id="email"
               className="form-input"
               placeholder="Email"
               required
             />
           </label>
-          <textarea
-            name="Text"
-            className="form-input mt-8"
-            placeholder="Message"
-          ></textarea>
+
+          <label htmlFor="textarea">
+            <textarea
+              id="textarea"
+              name="Text"
+              className="form-input mt-8"
+              placeholder="Message"
+            ></textarea>
+          </label>
           <input
             type="submit"
             className="text-secondary bg-transparent border-2 border-secondary px-8 py-1 rounded-lg block mx-auto hover:bg-secondary hover:text-additional
-    //       transition-all duration-300 font-PrimaryF mb-8 mt-12"
+          transition-all duration-300 font-PrimaryF mb-8 mt-12"
           />
           <span className=" text-secondary mx-auto text-center block">
             {result}

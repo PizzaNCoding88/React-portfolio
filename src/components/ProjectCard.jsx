@@ -75,6 +75,7 @@ const ProjectCard = (props) => {
           </button>
         </a>
         <a
+          aria-label="github"
           href={repo}
           target="_blank"
           rel="noreferrer"
