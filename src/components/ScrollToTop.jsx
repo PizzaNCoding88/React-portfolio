@@ -19,9 +19,9 @@ const ScrollToTop = () => {
   return (
     <>
       {showButton && (
-        <a href="#" className="opacity-90">
+        <a href="#" className="opacity-90 fixed right-3 bottom-3 z-10">
           <div
-            className="fixed right-3 bottom-3 md:right-8 md:bottom-8 bg-transparent rounded-full border-2 p-1 md:p-1 border-secondary animate-bounce opacity-0"
+            className="md:right-8 md:bottom-8 bg-transparent rounded-full border-2 p-1 md:p-1 border-secondary opacity-0"
             ref={upBtn}
           >
             <MdKeyboardDoubleArrowUp className="text-secondary text-lg md:text-2xl" />

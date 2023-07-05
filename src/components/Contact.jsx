@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
@@ -21,9 +23,34 @@ const Contact = () => {
       setResult(res.message);
     }
   };
+
+  const contacts = useRef();
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    gsap.fromTo(
+      contacts.current,
+      {
+        autoAlpha: 0,
+      },
+      {
+        autoAlpha: 1,
+        duration: 1.5,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: contacts.current,
+          start: "top 90%",
+        },
+      }
+    );
+  }, []);
+
   return (
     <section id="contact">
-      <div className=" sm:max-w-[70%] sm:mx-auto lg:flex lg:mt-16 lg:gap-16 lg:items-center">
+      <div
+        className=" sm:max-w-[70%] sm:mx-auto lg:flex lg:mt-16 lg:gap-16 lg:items-center"
+        ref={contacts}
+      >
         <h3 className="text-center text-secondary mt-12 mb-8 font-bold text-xl md:text-2xl lg:mt-0 px-4 sm:px-0 xl:text-3xl font-PrimaryF lg:font-SecondaryF">
           Have you got a project in mind? Let&#39;s talk
         </h3>
