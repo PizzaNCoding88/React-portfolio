@@ -69,10 +69,11 @@ const ProjectCard = (props) => {
       <div className="w-[95%] mx-auto flex items-center justify-center gap-[20%] sm:gap-[30%] ">
         <a href={link} target="_blank" rel="noreferrer">
           <button
-            className="projects-buttons group duration-500"
+            className="projects-buttons group duration-500 text-lg sm:text-xl lg:text-lg xl:text-2xl"
             ref={buttonLink}
           >
-            Link <LuArrowRight className="projects-button__icon" />
+            Link{" "}
+            <LuArrowRight className="projects-button__icon text-lg sm:text-xl lg:text-lg xl:text-2xl" />
           </button>
         </a>
         <a
@@ -83,7 +84,7 @@ const ProjectCard = (props) => {
           ref={buttonGit}
           className="opacity-0"
         >
-          <LuGithub className="projects-button__icon hover:text-white hover:scale-105 transition-all duration-300" />
+          <LuGithub className="projects-button__icon hover:text-white hover:scale-105 transition-all duration-300 text-lg sm:text-xl lg:text-lg xl:text-2xl" />
         </a>
       </div>
     </div>
