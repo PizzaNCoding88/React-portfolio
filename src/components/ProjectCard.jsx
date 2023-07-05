@@ -54,7 +54,8 @@ const ProjectCard = (props) => {
         <img
           alt={alt}
           src={image}
-          className="group-hover:blur-[8px] group-hover:opacity-40 group-hover:transition-all group-hover:duration-300 group-hover:ease-out group-hover:scale-[.98] "
+          className="group-hover:blur-[8px] group-hover:opacity-40 group-hover:transition-all group-hover:duration-300 group-hover:ease-out group-hover:scale-[.98]"
+          loading="lazy"
         />
         <div className="absolute left-[5%] bottom-[5%] w-4/5 ">
           <h2 className="text-secondary text-sm sm:text-xl md:text-lg uppercase opacity-0 font-bold group-hover:opacity-100 group-hover:transition-all group-hover:duration-1000 group-hover:ease-out mb-8 xl:text-xl">
