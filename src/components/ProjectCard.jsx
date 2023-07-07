@@ -1,7 +1,7 @@
 import { LuGithub, LuArrowRight } from "react-icons/lu";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { useEffect, useRef } from "react";
+import { useRef, useLayoutEffect } from "react";
 import data from "../data/projectData";
 
 const ProjectCard = (props) => {
@@ -10,7 +10,7 @@ const ProjectCard = (props) => {
   const buttonLink = useRef();
   const buttonGit = useRef();
   gsap.registerPlugin(ScrollTrigger);
-  useEffect(() => {
+  useLayoutEffect(() => {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: img.current,
@@ -19,7 +19,7 @@ const ProjectCard = (props) => {
     });
     tl.to(img.current, { autoAlpha: 1, duration: 3 });
   });
-  useEffect(() => {
+  useLayoutEffect(() => {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: buttonLink.current,

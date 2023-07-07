@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
@@ -27,7 +27,7 @@ const Contact = () => {
   const contacts = useRef();
   gsap.registerPlugin(ScrollTrigger);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.fromTo(
       contacts.current,
       {
@@ -52,7 +52,7 @@ const Contact = () => {
         ref={contacts}
       >
         <h3 className="text-center text-secondary mt-12 mb-8 font-bold text-xl md:text-2xl lg:mt-0 px-4 sm:px-0 xl:text-3xl font-PrimaryF lg:font-SecondaryF">
-          Have you got a project in mind? Let&#39;s talk
+          Have you got a project in mind? Let&#39;s talk TEST
         </h3>
         <form
           onSubmit={onSubmit}
