@@ -52,7 +52,7 @@ const Contact = () => {
         ref={contacts}
       >
         <h3 className="text-center text-secondary mt-12 mb-8 font-bold text-xl md:text-2xl lg:mt-0 px-4 sm:px-0 xl:text-3xl font-PrimaryF lg:font-SecondaryF">
-          Have you got a project in mind? Let&#39;s talk TEST
+          Have you got a project in mind? Let&#39;s talk
         </h3>
         <form
           onSubmit={onSubmit}

@@ -6,9 +6,9 @@ import data from "../data/projectData";
 
 const ProjectCard = (props) => {
   const { image, title, description, link, repo, id, alt } = props;
-  const img = useRef();
-  const buttonLink = useRef();
-  const buttonGit = useRef();
+  const img = useRef(),
+    buttonLink = useRef(),
+    buttonGit = useRef();
   gsap.registerPlugin(ScrollTrigger);
   useLayoutEffect(() => {
     let tl = gsap.timeline({

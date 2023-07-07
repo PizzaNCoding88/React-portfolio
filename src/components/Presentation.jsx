@@ -1,13 +1,15 @@
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 const Presentation = () => {
   gsap.registerPlugin(ScrollTrigger);
+  const avatar = useRef(),
+    h2 = useRef();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.fromTo(
-      ".img",
+      avatar.current,
       { y: 100, scale: 0 },
       {
         y: 0,
@@ -15,7 +17,7 @@ const Presentation = () => {
         duration: 1.5,
         ease: "power1.inOut",
         scrollTrigger: {
-          trigger: "h2",
+          trigger: h2.current,
           start: "top 90%",
           end: "bottom bottom",
         },
@@ -30,13 +32,17 @@ const Presentation = () => {
             <h1 className="text-secondary text-center  font-bold text-xl sm:text-2xl font-PrimaryF ">
               Building Experiences, Crafting Connections
             </h1>
-            <h2 className=" text-slate-300 opacity-90 text-center mt-12 font-extralight italic sm:text-xl font-SingatureF lg:text-2xl h2">
+            <h2
+              className=" text-slate-300 opacity-90 text-center mt-12 font-extralight italic sm:text-xl font-SingatureF lg:text-2xl"
+              ref={h2}
+            >
               Umberto Nardiello
             </h2>
             <img
               src="/assets/avatar.webp"
               alt="avatar"
-              className=" rounded-3xl mt-12 sm:w-[25rem] mr-8 sm:mx-auto img"
+              className=" rounded-3xl mt-12 sm:w-[25rem] mr-8 sm:mx-auto"
+              ref={avatar}
             ></img>
           </div>
         </div>
