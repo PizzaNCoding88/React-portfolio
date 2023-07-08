@@ -10,11 +10,11 @@ const Presentation = () => {
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.to(avatar.current, {
-        scale: 1,
-        duration: 0.8,
+        autoAlpha: 1,
+        duration: 2,
         scrollTrigger: {
           trigger: avatar.current,
-          start: "top 95%",
+          start: "top 90%",
           end: "bottom bottom",
         },
       });
@@ -36,7 +36,7 @@ const Presentation = () => {
             <h2 className=" text-slate-300 opacity-90 text-center mt-12 font-extralight italic sm:text-xl font-SingatureF lg:text-2xl">
               Umberto Nardiello
             </h2>
-            <div ref={avatar} className="scale-[0.1]">
+            <div ref={avatar} className="opacity-0">
               <img
                 src="/assets/avatar.webp"
                 alt="avatar"
