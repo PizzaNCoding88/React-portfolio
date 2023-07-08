@@ -8,36 +8,46 @@ const ProjectCard = (props) => {
   const { image, title, description, link, repo, id, alt } = props;
   const img = useRef(),
     buttonLink = useRef(),
-    buttonGit = useRef();
+    buttonGit = useRef(),
+    comp1 = useRef();
+
   gsap.registerPlugin(ScrollTrigger);
+
   useLayoutEffect(() => {
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: img.current,
-        start: "top 95%",
-      },
-    });
-    tl.to(img.current, { autoAlpha: 1, duration: 3 });
-  });
+    let ctx = gsap.context(() => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: img.current,
+          start: "top 95%",
+        },
+      });
+      tl.to(img.current, { autoAlpha: 1, duration: 3 });
+    }, comp1);
+    return () => ctx.revert();
+  }, []);
+
   useLayoutEffect(() => {
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: buttonLink.current,
-        start: "top 95%",
-      },
-    });
-    tl.to(buttonLink.current, {
-      autoAlpha: 1,
-      duration: 0.5,
-      ease: "power3.out",
-      delay: -0.2,
-    });
-    tl.to(buttonGit.current, {
-      autoAlpha: 1,
-      duration: 0.5,
-      ease: "power3.out",
-    });
-  });
+    let ctx1 = gsap.context(() => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: buttonLink.current,
+          start: "top 95%",
+        },
+      });
+      tl.to(buttonLink.current, {
+        autoAlpha: 1,
+        duration: 0.5,
+        ease: "power3.out",
+        delay: -0.2,
+      });
+      tl.to(buttonGit.current, {
+        autoAlpha: 1,
+        duration: 0.5,
+        ease: "power3.out",
+      });
+    }, comp1);
+    return () => ctx1.revert();
+  }, []);
 
   return (
     <div
@@ -46,6 +56,7 @@ const ProjectCard = (props) => {
           ? "md:flex md:flex-col md:justify-center md:items-center md:mx-auto"
           : ""
       } mb-14`}
+      ref={comp1}
     >
       <div
         className=" mt-10 mb-4 w-[95%] mx-auto relative group shadow-projects-shadow hover:shadow-none transition-shadow duration-300 opacity-0 rounded-md overflow-hidden "

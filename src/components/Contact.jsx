@@ -24,16 +24,13 @@ const Contact = () => {
     }
   };
 
-  const contacts = useRef();
+  const contacts = useRef(),
+    comp2 = useRef();
   gsap.registerPlugin(ScrollTrigger);
 
   useLayoutEffect(() => {
-    gsap.fromTo(
-      contacts.current,
-      {
-        autoAlpha: 0,
-      },
-      {
+    let ctx = gsap.context(() => {
+      gsap.to(contacts.current, {
         autoAlpha: 1,
         duration: 1.5,
         ease: "power1.inOut",
@@ -41,14 +38,15 @@ const Contact = () => {
           trigger: contacts.current,
           start: "top 90%",
         },
-      }
-    );
+      });
+    }, comp2);
+    return () => ctx.revert();
   }, []);
 
   return (
-    <section id="contact">
+    <section id="contact" ref={comp2}>
       <div
-        className=" sm:max-w-[70%] sm:mx-auto lg:flex lg:mt-16 lg:gap-16 lg:items-center"
+        className=" sm:max-w-[70%] sm:mx-auto lg:flex lg:mt-16 lg:gap-16 lg:items-center opacity-0"
         ref={contacts}
       >
         <h3 className="text-center text-secondary mt-12 mb-8 font-bold text-xl md:text-2xl lg:mt-0 px-4 sm:px-0 xl:text-3xl font-PrimaryF lg:font-SecondaryF">
