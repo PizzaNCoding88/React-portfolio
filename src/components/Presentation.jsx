@@ -12,7 +12,6 @@ const Presentation = () => {
       gsap.to(avatar.current, {
         scale: 1,
         duration: 0.8,
-        // ease: "power1.inOut",
         scrollTrigger: {
           trigger: avatar.current,
           start: "top 95%",
@@ -37,12 +36,13 @@ const Presentation = () => {
             <h2 className=" text-slate-300 opacity-90 text-center mt-12 font-extralight italic sm:text-xl font-SingatureF lg:text-2xl">
               Umberto Nardiello
             </h2>
-            <img
-              src="/assets/avatar.webp"
-              alt="avatar"
-              className=" rounded-3xl mt-12 sm:w-[25rem] mr-8 sm:mx-auto scale-[0.1] "
-              ref={avatar}
-            ></img>
+            <div ref={avatar} className="scale-[0.1]">
+              <img
+                src="/assets/avatar.webp"
+                alt="avatar"
+                className="rounded-3xl mt-12 sm:w-[25rem] mr-8 sm:mx-auto"
+              ></img>
+            </div>
           </div>
         </div>
       </section>
