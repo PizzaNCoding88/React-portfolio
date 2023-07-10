@@ -29,7 +29,7 @@
 
 @layer components {
   .hero-section {
-    @apply before:content-["UN"] before:text-[13rem] before:text-[#0d0d0d] before:absolute before:top-[50%] before:left-[50%] before:-translate-x-1/2 before:-translate-y-1/2 before:font-bold before:z-0 before:drop-shadow-xl before:blur-[1px] before:[text-shadow:_0_0_10px_rgb(235,89,57)] sm:before:[text-shadow:_0_0_20px_rgb(235,89,57)] md:before:[text-shadow:_0_0_40px_rgb(235,89,57)] sm:before:text-[20rem] before:font-SecondaryF lg:before:text-[25rem];
+    @apply before:content-["UN"] before:text-[13rem] before:text-[#0d0d0d] before:absolute before:top-[50%] before:left-[50%] before:-translate-x-1/2 before:-translate-y-1/2 before:font-bold before:z-0 before:drop-shadow-xl before:blur-[1px]  sm:before:text-[20rem] before:font-SecondaryF lg:before:text-[25rem] before:[text-shadow:_6px_6px_0px_rgba(235,89,57,1)];
   }
 
   .flexy {
