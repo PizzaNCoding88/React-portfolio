@@ -1,69 +1,55 @@
 import { RxCaretDown } from "react-icons/rx";
 import "../../src/index.css";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { CustomEase } from "gsap/all";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
-  const name = useRef();
   const frontend = "Frontend";
   const webDev = "Web Dev";
-
-  useEffect(() => {
-    gsap.fromTo(name.current, { autoAlpha: 0 }, { autoAlpha: 1, duration: 5 });
-    gsap.fromTo(
-      ".hero",
-      { autoAlpha: 0, y: -100 },
-      {
-        autoAlpha: 1,
-        y: 0,
-        ease: "bounce.in",
-        stagger: { each: 0.2 },
-        duration: 0.7,
-      }
-    );
-    gsap.fromTo(
-      ".hero1",
-      { autoAlpha: 0, y: 100 },
-      {
-        autoAlpha: 1,
-        y: 0,
-        ease: "bounce.in",
-        stagger: { each: 0.2 },
-        duration: 0.7,
-      }
-    );
-  }, []);
 
   return (
     <>
       <div className="h-[calc(100dvh-5.25rem)] flexy relative">
         <div className="hero-section"></div>
         <div className="w-4/5 z-20 flexy relative">
-          <div className="absolute flexy -left-4 mb-4 sm:mb-16 lg:mb-32 clip1">
+          <motion.div
+            className="absolute flexy -left-4 mb-4 sm:mb-16 lg:mb-32 clip1"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            transition={{ staggerChildren: 0.08, delay: 0.5 }}
+          >
             {frontend.split("").map((letter, i) => {
               return letter === " " ? (
-                <div key={i} className="hero">
+                <motion.div
+                  key={i}
+                  className="hero"
+                  initial={{ y: -100, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                >
                   {" "}
                   &nbsp;{" "}
-                </div>
+                </motion.div>
               ) : (
-                <div
+                <motion.div
                   key={i}
-                  className="text-left mb-48 text-secondary font-bold text-xl sm:mb-60 font-PrimaryF md:text-3xl lg:text-4xl xl:text-5xl  hero"
+                  className="text-left mb-48 text-secondary font-bold text-xl sm:mb-60 font-PrimaryF md:text-3xl lg:text-4xl xl:text-5xl"
+                  initial={{ y: -100, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ staggerChildren: 0.5 }}
                 >
                   {letter}
-                </div>
+                </motion.div>
               );
             })}
-          </div>
+          </motion.div>
 
-          <h1
-            className="text-center text-5xl xl:text-6xl uppercase leading-10 font-bold text-secondary drop-shadow-2xl tracking-wide md:tracking-wider name xl:tracking-widest"
-            ref={name}
+          <motion.h1
+            className="text-center text-5xl xl:text-6xl uppercase leading-10 font-bold text-secondary drop-shadow-2xl tracking-wide md:tracking-wider xl:tracking-widest"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
           >
             Umberto
-          </h1>
+          </motion.h1>
 
           <div className="absolute flexy -right-4 mt-4 sm:mt-16 lg:mt-32 clip1 ">
             {webDev.split("").map((letter, i) => {
@@ -75,7 +61,7 @@ const HeroSection = () => {
               ) : (
                 <div
                   key={i}
-                  className="text-left mt-48 text-secondary font-bold text-xl sm:mt-60 font-PrimaryF md:text-3xl lg:text-4xl xl:text-5xl  hero1"
+                  className="text-left mt-48 text-secondary font-bold text-xl sm:mt-60 font-PrimaryF md:text-3xl lg:text-4xl xl:text-5xl"
                 >
                   {letter}
                 </div>
