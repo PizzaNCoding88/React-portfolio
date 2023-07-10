@@ -15,29 +15,18 @@ const HeroSection = () => {
             className="absolute flexy -left-4 mb-4 sm:mb-16 lg:mb-32 clip1"
             initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
-            transition={{ staggerChildren: 0.08, delay: 0.5 }}
+            transition={{ staggerChildren: 0.1, delay: 0.5 }}
           >
-            {frontend.split("").map((letter, i) => {
-              return letter === " " ? (
-                <motion.div
-                  key={i}
-                  className="hero"
-                  initial={{ y: -100, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
+            {frontend.split("").map((char, index) => {
+              return (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-secondary"
                 >
-                  {" "}
-                  &nbsp;{" "}
-                </motion.div>
-              ) : (
-                <motion.div
-                  key={i}
-                  className="text-left mb-48 text-secondary font-bold text-xl sm:mb-60 font-PrimaryF md:text-3xl lg:text-4xl xl:text-5xl"
-                  initial={{ y: -100, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ staggerChildren: 0.5 }}
-                >
-                  {letter}
-                </motion.div>
+                  {char}
+                </motion.span>
               );
             })}
           </motion.div>

@@ -1,6 +1,5 @@
-import React, { useRef, useLayoutEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import { motion } from "framer-motion";
+import React from "react";
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
@@ -24,31 +23,15 @@ const Contact = () => {
     }
   };
 
-  const contacts = useRef(),
-    comp2 = useRef();
-  gsap.registerPlugin(ScrollTrigger);
-
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.to(contacts.current, {
-        autoAlpha: 1,
-        duration: 1.5,
-        ease: "power1.inOut",
-        scrollTrigger: {
-          trigger: contacts.current,
-          start: "top 90%",
-        },
-      });
-    }, comp2);
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <section id="contact" ref={comp2}>
-      <div
-        className=" sm:max-w-[70%] sm:mx-auto lg:flex lg:mt-16 lg:gap-16 lg:items-center opacity-0"
-        ref={contacts}
-      >
+    <motion.section
+      id="contact"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.5 }}
+    >
+      <div className=" sm:max-w-[70%] sm:mx-auto lg:flex lg:mt-16 lg:gap-16 lg:items-center">
         <h3 className="text-center text-secondary mt-12 mb-8 font-bold text-xl md:text-2xl lg:mt-0 px-4 sm:px-0 xl:text-3xl font-PrimaryF lg:font-SecondaryF">
           Have you got a project in mind? Let&#39;s talk
         </h3>
@@ -61,13 +44,17 @@ const Contact = () => {
             className="text-secondary pl-2 font-PrimaryF relative"
             aria-label="name"
           >
-            <input
+            <motion.input
               type="text"
               id="name"
               className="form-input"
               placeholder="Name"
               required
-            />
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+            ></motion.input>
           </label>
 
           <label
@@ -75,22 +62,30 @@ const Contact = () => {
             aria-label="email"
             className="text-secondary pl-2 font-PrimaryF -translate-x-8"
           >
-            <input
+            <motion.input
               type="email"
               id="email"
               className="form-input"
               placeholder="Email"
               required
-            />
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.7 }}
+            ></motion.input>
           </label>
 
           <label htmlFor="textarea" aria-label="textaread">
-            <textarea
+            <motion.textarea
               id="textarea"
               name="Text"
               className="form-input mt-8"
               placeholder="Message"
-            ></textarea>
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 1 }}
+            ></motion.textarea>
           </label>
           <input
             type="submit"
@@ -103,7 +98,7 @@ const Contact = () => {
           </span>
         </form>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
