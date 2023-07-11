@@ -22,7 +22,7 @@ const HeroSection = () => {
   };
 
   const lettersWeb = {
-    hidden: { opacity: 0, y: -100 },
+    hidden: { opacity: 0, y: 100 },
     visible: { opacity: 1, y: 0 },
   };
 
@@ -42,7 +42,7 @@ const HeroSection = () => {
                 <motion.span
                   key={index}
                   variants={lettersFront}
-                  className="text-secondary"
+                  className="text-secondary "
                 >
                   {char}
                 </motion.span>
@@ -69,7 +69,7 @@ const HeroSection = () => {
               return (
                 <motion.span
                   key={index}
-                  className="text-secondary"
+                  className="text-left mt-48 text-secondary font-bold text-xl sm:mt-60 font-PrimaryF md:text-3xl lg:text-4xl xl:text-5xl  hero1"
                   variants={lettersWeb}
                 >
                   {char}
