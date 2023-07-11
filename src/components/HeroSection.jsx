@@ -42,7 +42,7 @@ const HeroSection = () => {
                 <motion.span
                   key={index}
                   variants={lettersFront}
-                  className="text-secondary "
+                  className="text-left mb-48 text-secondary font-bold text-xl sm:mb-60 font-PrimaryF md:text-3xl lg:text-4xl xl:text-5xl hero "
                 >
                   {char}
                 </motion.span>
