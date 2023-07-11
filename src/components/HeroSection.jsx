@@ -51,7 +51,7 @@ const HeroSection = () => {
           </motion.h3>
 
           <motion.h1
-            className="text-center text-5xl xl:text-6xl uppercase leading-10 font-bold text-secondary drop-shadow-2xl tracking-wide md:tracking-wider xl:tracking-widest [text-shadow:_1px_3px_0px_rgba(229,224,224,0.5)]"
+            className="text-center text-5xl xl:text-6xl uppercase leading-10 font-bold text-secondary drop-shadow-2xl tracking-wide md:tracking-wider xl:tracking-widest [text-shadow:_3px_3px_0px_rgba(0,0,0,1)]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
