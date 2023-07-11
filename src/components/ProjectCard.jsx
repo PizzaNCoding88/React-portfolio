@@ -37,18 +37,20 @@ const ProjectCard = (props) => {
       </motion.div>
 
       <div className="w-[95%] mx-auto flex items-center justify-center gap-[20%] sm:gap-[30%] ">
-        <a href={link} target="_blank" rel="noreferrer">
-          <motion.button
-            className="projects-buttons group duration-500 text-lg sm:text-xl lg:text-lg xl:text-2xl"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-          >
+        <motion.a
+          href={link}
+          target="_blank"
+          rel="noreferrer"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+        >
+          <button className="projects-buttons group duration-500 text-lg sm:text-xl lg:text-lg xl:text-2xl">
             Link{" "}
             <LuArrowRight className="projects-button__icon text-lg sm:text-xl lg:text-lg xl:text-2xl" />
-          </motion.button>
-        </a>
+          </button>
+        </motion.a>
         <motion.a
           aria-label="github"
           href={repo}
