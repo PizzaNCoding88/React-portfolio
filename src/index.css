@@ -41,7 +41,7 @@
   }
 
   .projects-buttons {
-    @apply hover:text-additional relative hover:before:w-full transition-all xl:px-8 xl:py-2 xl:text-xl  text-secondary opacity-0;
+    @apply hover:text-additional relative hover:before:w-full transition-all xl:px-8 xl:py-2 xl:text-xl  text-secondary;
   }
 
   .projects-button__icon {
