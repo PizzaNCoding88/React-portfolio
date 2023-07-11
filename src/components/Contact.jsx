@@ -67,6 +67,7 @@ const Contact = () => {
               className="form-input"
               placeholder="Name"
               required
+              name="name"
             />
           </label>
 
@@ -80,6 +81,7 @@ const Contact = () => {
               id="email"
               className="form-input"
               placeholder="Email"
+              name="email"
               required
             />
           </label>
