@@ -1,87 +1,82 @@
 import { RxCaretDown } from "react-icons/rx";
 import "../../src/index.css";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { CustomEase } from "gsap/all";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
-  const name = useRef();
   const frontend = "Frontend";
   const webDev = "Web Dev";
+  const sentence = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        staggerChildren: 0.08,
+      },
+    },
+  };
 
-  useEffect(() => {
-    gsap.fromTo(name.current, { autoAlpha: 0 }, { autoAlpha: 1, duration: 5 });
-    gsap.fromTo(
-      ".hero",
-      { autoAlpha: 0, y: -100 },
-      {
-        autoAlpha: 1,
-        y: 0,
-        ease: "bounce.in",
-        stagger: { each: 0.2 },
-        duration: 0.7,
-      }
-    );
-    gsap.fromTo(
-      ".hero1",
-      { autoAlpha: 0, y: 100 },
-      {
-        autoAlpha: 1,
-        y: 0,
-        ease: "bounce.in",
-        stagger: { each: 0.2 },
-        duration: 0.7,
-      }
-    );
-  }, []);
+  const lettersFront = {
+    hidden: { opacity: 0, y: -100 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const lettersWeb = {
+    hidden: { opacity: 0, y: 100 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
     <>
       <div className="h-[calc(100dvh-5.25rem)] flexy relative">
         <div className="hero-section"></div>
         <div className="w-4/5 z-20 flexy relative">
-          <div className="absolute flexy -left-4 mb-4 sm:mb-16 lg:mb-32 clip1">
-            {frontend.split("").map((letter, i) => {
-              return letter === " " ? (
-                <div key={i} className="hero">
-                  {" "}
-                  &nbsp;{" "}
-                </div>
-              ) : (
-                <div
-                  key={i}
-                  className="text-left mb-48 text-secondary font-bold text-xl sm:mb-60 font-PrimaryF md:text-3xl lg:text-4xl xl:text-5xl  hero"
+          <motion.h3
+            className="absolute flexy -left-4 mb-4 sm:mb-16 lg:mb-32 clip1"
+            variants={sentence}
+            initial="hidden"
+            animate="visible"
+          >
+            {frontend.split("").map((char, index) => {
+              return (
+                <motion.span
+                  key={index}
+                  variants={lettersFront}
+                  className="text-left mb-48 text-secondary font-bold text-xl sm:mb-60 font-PrimaryF md:text-3xl lg:text-4xl xl:text-5xl hero "
                 >
-                  {letter}
-                </div>
+                  {char}
+                </motion.span>
               );
             })}
-          </div>
+          </motion.h3>
 
-          <h1
-            className="text-center text-5xl xl:text-6xl uppercase leading-10 font-bold text-secondary drop-shadow-2xl tracking-wide md:tracking-wider name xl:tracking-widest"
-            ref={name}
+          <motion.h1
+            className="text-center text-5xl xl:text-6xl uppercase leading-10 font-bold text-secondary drop-shadow-2xl tracking-wide md:tracking-wider xl:tracking-widest [text-shadow:_3px_3px_0px_rgba(0,0,0,1)]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
           >
             Umberto
-          </h1>
+          </motion.h1>
 
-          <div className="absolute flexy -right-4 mt-4 sm:mt-16 lg:mt-32 clip1 ">
-            {webDev.split("").map((letter, i) => {
-              return letter === " " ? (
-                <div key={i} className="hero1">
-                  {" "}
-                  &nbsp;{" "}
-                </div>
-              ) : (
-                <div
-                  key={i}
+          <motion.h3
+            className="absolute flexy -right-4 mt-4 sm:mt-16 lg:mt-32 clip1 "
+            variants={sentence}
+            initial="hidden"
+            animate="visible"
+          >
+            {webDev.split("").map((char, index) => {
+              return (
+                <motion.span
+                  key={index}
                   className="text-left mt-48 text-secondary font-bold text-xl sm:mt-60 font-PrimaryF md:text-3xl lg:text-4xl xl:text-5xl  hero1"
+                  variants={lettersWeb}
                 >
-                  {letter}
-                </div>
+                  {char}
+                </motion.span>
               );
             })}
-          </div>
+          </motion.h3>
         </div>
         <RxCaretDown className=" absolute bottom-4 text-secondary animate-bounce text-2xl lg:text-5xl " />
       </div>

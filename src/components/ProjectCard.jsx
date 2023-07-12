@@ -1,53 +1,9 @@
 import { LuGithub, LuArrowRight } from "react-icons/lu";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import { useRef, useLayoutEffect } from "react";
+import { motion } from "framer-motion";
 import data from "../data/projectData";
 
 const ProjectCard = (props) => {
   const { image, title, description, link, repo, id, alt } = props;
-  const img = useRef(),
-    buttonLink = useRef(),
-    buttonGit = useRef(),
-    comp1 = useRef();
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: img.current,
-          start: "top 95%",
-        },
-      });
-      tl.to(img.current, { autoAlpha: 1, duration: 3 });
-    }, comp1);
-    return () => ctx.revert();
-  }, []);
-
-  useLayoutEffect(() => {
-    let ctx1 = gsap.context(() => {
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: buttonLink.current,
-          start: "top 95%",
-        },
-      });
-      tl.to(buttonLink.current, {
-        autoAlpha: 1,
-        duration: 0.5,
-        ease: "power3.out",
-        delay: -0.2,
-      });
-      tl.to(buttonGit.current, {
-        autoAlpha: 1,
-        duration: 0.5,
-        ease: "power3.out",
-      });
-    }, comp1);
-    return () => ctx1.revert();
-  }, []);
 
   return (
     <div
@@ -56,11 +12,13 @@ const ProjectCard = (props) => {
           ? "md:flex md:flex-col md:justify-center md:items-center md:mx-auto"
           : ""
       } mb-14`}
-      ref={comp1}
     >
-      <div
-        className=" mt-10 mb-4 w-[95%] mx-auto relative group shadow-projects-shadow hover:shadow-none transition-shadow duration-300 opacity-0 rounded-md overflow-hidden "
-        ref={img}
+      <motion.div
+        className=" mt-10 mb-4 w-[95%] mx-auto relative group shadow-projects-shadow hover:shadow-none transition-shadow duration-300 rounded-md overflow-hidden"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2 }}
       >
         <img
           alt={alt}
@@ -76,27 +34,35 @@ const ProjectCard = (props) => {
             {description}
           </p>
         </div>
-      </div>
+      </motion.div>
+
       <div className="w-[95%] mx-auto flex items-center justify-center gap-[20%] sm:gap-[30%] ">
-        <a href={link} target="_blank" rel="noreferrer">
-          <button
-            className="projects-buttons group duration-500 text-lg sm:text-xl lg:text-lg xl:text-2xl"
-            ref={buttonLink}
-          >
+        <motion.a
+          href={link}
+          target="_blank"
+          rel="noreferrer"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+        >
+          <button className="projects-buttons group duration-500 text-lg sm:text-xl lg:text-lg xl:text-2xl">
             Link{" "}
             <LuArrowRight className="projects-button__icon text-lg sm:text-xl lg:text-lg xl:text-2xl" />
           </button>
-        </a>
-        <a
+        </motion.a>
+        <motion.a
           aria-label="github"
           href={repo}
           target="_blank"
           rel="noreferrer"
-          ref={buttonGit}
-          className="opacity-0"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
         >
           <LuGithub className="projects-button__icon hover:text-white hover:scale-105 transition-all duration-300 text-lg sm:text-xl lg:text-lg xl:text-2xl" />
-        </a>
+        </motion.a>
       </div>
     </div>
   );
