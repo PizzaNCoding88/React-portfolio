@@ -15,7 +15,7 @@ const NavBar = () => {
     <nav id="home">
       <div className="flex items-center justify-between w-4/5 py-6 mx-auto">
         <div className=" font-SecondaryF text-secondary text-3xl lg:text-4xl xl:text-4xl">
-          UN
+          <img src="/assets/logo1.svg" className=""></img>
         </div>
         <div>
           <ul className="sm:flex flex-row justify-between items-center gap-8 text-xl font-PrimaryF text-secondary font-bold hidden">
