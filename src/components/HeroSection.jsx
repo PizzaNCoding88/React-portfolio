@@ -6,12 +6,20 @@ const HeroSection = () => {
   const frontend = "Frontend";
   const webDev = "Web Dev";
   const sentence = {
-    hidden: { opacity: 1 },
     visible: {
-      opacity: 1,
       transition: {
-        delay: 0.5,
-        staggerChildren: 0.08,
+        delayChildren: 0.2,
+        staggerChildren: 0.12,
+      },
+    },
+  };
+
+  const sentence1 = {
+    visible: {
+      transition: {
+        delayChildren: 0.2,
+        staggerChildren: 0.12,
+        staggerDirection: -1,
       },
     },
   };
@@ -61,7 +69,7 @@ const HeroSection = () => {
 
           <motion.h3
             className="absolute flexy -right-4 mt-4 sm:mt-16 lg:mt-32 clip1 "
-            variants={sentence}
+            variants={sentence1}
             initial="hidden"
             animate="visible"
           >
