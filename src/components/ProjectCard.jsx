@@ -41,10 +41,10 @@ const ProjectCard = (props) => {
           href={link}
           target="_blank"
           rel="noreferrer"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
+          transition={{ delay: 0.1, ease: "easeInOut" }}
         >
           <button className="projects-buttons group duration-500 text-lg sm:text-xl lg:text-lg xl:text-2xl">
             Link{" "}
@@ -56,10 +56,10 @@ const ProjectCard = (props) => {
           href={repo}
           target="_blank"
           rel="noreferrer"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
+          transition={{ delay: 0.1, ease: "easeInOut" }}
         >
           <LuGithub className="projects-button__icon hover:text-white hover:scale-105 transition-all duration-300 text-lg sm:text-xl lg:text-lg xl:text-2xl" />
         </motion.a>
