@@ -60,6 +60,7 @@ const ProjectCard = (props) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1, ease: "easeInOut" }}
+          className={`${repo === undefined ? "hidden" : ""}`}
         >
           <LuGithub className="projects-button__icon hover:text-white hover:scale-105 transition-all duration-300 text-lg sm:text-xl lg:text-lg xl:text-2xl" />
         </motion.a>
